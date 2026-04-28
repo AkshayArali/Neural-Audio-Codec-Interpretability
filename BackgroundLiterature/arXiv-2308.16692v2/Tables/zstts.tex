@@ -1,0 +1,21 @@
+\begin{table*}[t]
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.65\textwidth}{!}{
+    \begin{tabular}{lc|cc|cc}
+        \toprule
+        ~ & & \multicolumn{2}{c}{\textbf{Objective}} & \multicolumn{2}{c}{\textbf{Subjective}}  \\
+        Model & Tokenizer & WER$\downarrow$ & SIM$\uparrow$ & MOS$\uparrow$ & SMOS$\uparrow$ \\
+        \midrule
+        Groundtruth &  & 1.9 & 0.93 & 4.5 & 3.96 \\
+        % \midrule
+        VALL-E & EnCodec& 7.9 & 0.75 & 3.08 & 3.31 \\
+        USLM & \method & \textbf{6.5} & \textbf{0.84} & \textbf{3.63} & \textbf{3.45} \\
+        \bottomrule
+    \end{tabular}}
+    \caption{Results of zero-shot TTS
+    }
+    \label{tab:zstts}
+\end{table*}

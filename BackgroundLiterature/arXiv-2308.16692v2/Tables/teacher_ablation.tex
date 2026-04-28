@@ -1,0 +1,51 @@
+% \begin{table*}[t]
+%     % \setlength{\abovecaptionskip}{-0.cm}
+%     \setlength{\belowcaptionskip}{-0.2cm}
+%     % \renewcommand{\arraystretch}{1.2}
+%     \Large
+%     \centering
+%     \resizebox{0.9\textwidth}{!}{
+%     \begin{tabular}{l|ccc|ccc}
+%         \toprule
+%         ~ & \multicolumn{3}{c}{\textbf{Content}} & \multicolumn{3}{c}{\textbf{Timbre}}  \\
+%         ~ & \multicolumn{2}{c}{DSRIBench} & Reconstruction &
+%         \multicolumn{2}{c}{DSRIBench} & Reconstruction \\
+%         ~ & MI & WER & WER& MI & ACC & SIM \\
+%         \midrule
+%         EnCodec-L1 & 16.5 & 61.52 & 38.34 & 6.52 & 0.44 & 0.92 \\
+%         EnCodec-All & 23.6 & 30.91 & 5.11 & 14.7 & 0.94 & 0.98 \\
+%         \method-L1 & & & 9.57 & & & 0.74 \\
+%         \method-L2:8 & & & 86.58 & & & 0.79 \\
+%         \method-all & & & 5.04 & & & 0.97 \\
+%         \bottomrule
+%     \end{tabular}}
+%     \caption{Results of speech disentanglement.
+%     }
+%     \label{tab:speech_disentanglement}
+% \end{table*}
+
+
+\begin{table*}[h]
+    % \setlength{\abovecaptionskip}{-0.cm}
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.8\textwidth}{!}{
+    \begin{tabular}{lc|cc|cc}
+        \toprule
+        ~ & ~& \multicolumn{2}{c}{\textbf{TA}} & \multicolumn{2}{c}{\textbf{IP}}   \\
+        Teacher &  & MI & WER$^{\dagger}$ & WER$^{\ast}$ & SIM\\
+        \midrule
+        HuBERT L9 unit & RVQ-1 &  &  & 20.02 & 0.72 \\
+        HuBERT L9 unit & RVQ-8 &  &  & 5.84 & 0.95 \\
+        HuBERT L9 representation & RVQ-1 & & & & \\
+        HuBERT L9 representation & RVQ-8 & & & & \\
+        HuBERT average representation & RVQ-1 &  &  & 9.57 & 0.74 \\
+        HuBERT average representation & RVQ-8 &  &  & 5.04 & 0.97 \\
+        \bottomrule
+    \end{tabular}}
+    \caption{Results of \method training with different semantic teacher representations on DSRBench. TA refers to text alignment and IP denotes information preservation. MI and WER$^{\dagger}$ refer to mutual information and word error rate of the downstream model. WER$^{\ast}$ and SIM refer to word error rate and speaker similarity of resynthesized speech respectively.
+    }
+    \label{tab:teacher_ablation}
+\end{table*}

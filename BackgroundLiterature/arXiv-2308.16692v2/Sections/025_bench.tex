@@ -1,0 +1,25 @@
+% To analysize the information composition of different speech tokens quantitatively, we established Discrete Speech Representation Information Benchmark (DSRIBench) based on SUPERB~\citep{yang2021superb}. In this work, we mainly investigate two speech attributes: content and timbre. 
+
+ % We calculate the mutual information between speech tokens and different attributes through the performance of downstream tasks .
+
+To build powerful speech language models, discrete speech representations should possess the following two key characteristics: i)~Strong alignment with text; ii) Effective preservation of speech information. Building on this premise, we establish speech Language Model Token Benchmark~(\bench) to assess the suitability of speech tokens for constructing speech language models. 
+% In this benchmark, we evaluate the alignment between speech tokens and text by estimating their mutual information. We assess preservation of speech information within speech tokens by evaluating the quality of resynthesized speech. 
+% \bench is available on \url{https://github.com/0nutation/SLMTokBench}.
+
+\subsection{Text Alignment Evaluation}
+\label{sec:026_information principle}
+\input{Sections/026_bench_info}
+
+
+\subsection{Information Preservation Evaluation}
+\label{sec:027_bench_resys}
+\input{Sections/027_bench_resys}
+
+
+\subsection{Comparing Semantic $\&$ Acoustic Tokens}
+\label{sec:028_bench_results}
+\input{Sections/028_bench_results}
+
+
+
+

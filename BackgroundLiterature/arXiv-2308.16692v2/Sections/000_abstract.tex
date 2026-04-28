@@ -1,0 +1,22 @@
+% Speech discrete representations can be categorized into semantic tokens and acoustic tokens.
+% To evaluate different speech discrete representations, we develop the DSR Benchmark, which assesses information from various dimensions. 
+
+% Speech discrete representations can be categorized into semantic tokens and acoustic tokens. We establish \bench to evaluate different discrete speech representations from an information perspective. We find these two types of tokens contain different aspects of information respectively.
+
+% Current speech large language models build upon discrete speech representations, which can be categorized into semantic tokens and acoustic tokens. However, existing speech tokens are not specifically designed for speech language modeling. We establish \bench, the first benchmark designed to assess the suitability of speech tokens for building speech language models. Our results indicate that neither semantic nor acoustic tokens are ideal for this purpose.
+% We propose \method, a unified speech tokenizer for speech large language models. \method adopts the Encoder-Decoder architecture with residual vector quantization~(RVQ). Unifying semantic and acoustic tokens, \method disentangles different aspects of speech information hierarchically across different RVQ layers.
+% Leveraging \method, we construct a \textbf{U}nified \textbf{S}peech \textbf{L}anguage \textbf{M}odel~(USLM).
+% Experimental results show that \method performs comparably to EnCodec in speech reconstruction and  demonstrates strong performance on the \bench benchmark. The USLM outperforms VALL-E in zero-shot Text-to-Speech tasks. Code and models are available at .
+
+Current speech large language models build upon discrete speech representations, which can be categorized into semantic tokens and acoustic tokens. However, existing speech tokens are not specifically designed for speech language modeling. To assess the suitability of speech tokens for building speech language models, we established the first benchmark, SLMTokBench. Our results indicate that neither semantic nor acoustic tokens are ideal for this purpose. Therefore, we propose SpeechTokenizer, a unified speech tokenizer for speech large language models. SpeechTokenizer adopts the Encoder-Decoder architecture with residual vector quantization (RVQ). Unifying semantic and acoustic tokens, SpeechTokenizer disentangles different aspects of speech information hierarchically across different RVQ layers. Furthermore, We construct a \textbf{U}nified \textbf{S}peech \textbf{L}anguage \textbf{M}odel~(USLM) leveraging SpeechTokenizer. Experiments show that SpeechTokenizer performs comparably to EnCodec in speech reconstruction and demonstrates strong performance on the SLMTokBench benchmark. Also, USLM outperforms VALL-E in zero-shot Text-to-Speech tasks. Code and models are available at \url{https://github.com/ZhangXInFD/SpeechTokenizer/}.
+% Speech samples of \method are available at \url{https://0nutation.github.io/SpeechTokenizer.github.io/}.
+
+% Speech samples of \method are available at \url{https://speechtokenizer.github.io/}.
+
+% Code and models are available at \url{https://github.com/ZhangXInFD/SpeechTokenizer/}.
+
+% Leveraging a semantic teacher to guide the first RVQ quantizer, \method ensures the first layer tokens to contain content information. With residual structure, the subsequent quantizers complement the remaining paralinguistic information. 
+
+% We propose \method, unifying semantic tokens and acoustic tokens into a single speech discrete representation. Concretely, semantic tokens model content information, while acoustic tokens serve to complement the paralinguistic information lost by semantic tokens. 
+% \method adopts Encoder-Decoder architecture along with the residual vector quantization~(RVQ). It leverages knowledge distillation to learn semantic information and utilizes residual structures to realize serial information disentanglement.
+% Based on \method, we trained a zero-shot TTS (Text-to-Speech) model. Experimental results demonstrate that \method achieves effective information disentanglement, and our zero-shot TTS model outperforms Encodec-based VALL-E.

@@ -1,0 +1,19 @@
+
+
+
+
+
+% SUPERB is a leaderboard to benchmark the performance of speech self-supervised pretrained models across a wide range of speech processing tasks by learning task-specialized lightweight
+% prediction heads on top of the frozen model. To accommodate speech discrete representations as input, DSRIBench made modifications to the framework of SUPERB. In order to assess different aspects of information, DSRIBench selected corresponding downstream tasks from the SUPERB benchmark.
+
+
+% \noindent\textbf{Frameworks}~
+% SUPERB freezes the parameters of pretrained
+% models across tasks and extract fixed representations to be fed into each task-specialized prediction head. 
+% In DSRIBench, discrete representations are used as inputs to downstream models. Specifically, for each discrete representation, we first establish an embedding matrix, which can be either randomly initialized or derived from the k-means centroid matrix or vector quantization codebooks obtained during the discretization process. We use the embedding matrix to embed the discrete representations and obtain continuous representations, which are then fed into task-specialized lightweight downstream models. $\theta$ denotes the parameters of different downstream models.
+% The embedding matrix can be either trainable or frozen.
+
+
+% \noindent\textbf{Downstream Tasks}~
+% To assess content information, we choose Automatic Speech Recognition~(ASR) task, which transcribes utterances into words. To assess speaker information, we choose Speaker Identification~(SID) task, which classifies each utterance for its speaker identity as a multi-class classification. To assess paralinguistics information, we choose Emotion Recognition~(ER), which predicts an emotion class for each
+% utterance. The settings of model architecture, datasets, and algorithms for downstream tasks are entirely consistent with those in SUPERB. Details are shown in Appendix. 

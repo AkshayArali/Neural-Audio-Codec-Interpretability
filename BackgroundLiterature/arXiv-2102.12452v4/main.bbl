@@ -1,0 +1,465 @@
+\begin{thebibliography}{59}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Adi et~al.(2016)Adi, Kermany, Belinkov, Lavi, and
+  Goldberg}]{DBLP:journals/corr/AdiKBLG16}
+Adi, Yossi, Einat Kermany, Yonatan Belinkov, Ofer Lavi, and Yoav Goldberg.
+  2016.
+\newblock Fine-grained analysis of sentence embeddings using auxiliary
+  prediction tasks.
+\newblock \emph{CoRR}, abs/1608.04207.
+
+\bibitem[{Adi et~al.(2017)Adi, Kermany, Belinkov, Lavi, and
+  Goldberg}]{adi:2017:ICLR}
+Adi, Yossi, Einat Kermany, Yonatan Belinkov, Ofer Lavi, and Yoav Goldberg.
+  2017.
+\newblock Fine-grained analysis of sentence embeddings using auxiliary
+  prediction tasks.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}.
+
+\bibitem[{Alain and Bengio(2016)}]{alain2016understanding}
+Alain, Guillaume and Yoshua Bengio. 2016.
+\newblock Understanding intermediate layers using linear classifier probes.
+\newblock \emph{arXiv preprint arXiv:1610.01644v3}.
+
+\bibitem[{Bau et~al.(2019)Bau, Belinkov, Sajjad, Durrani, Dalvi, and
+  Glass}]{bau2018identifying}
+Bau, Anthony, Yonatan Belinkov, Hassan Sajjad, Nadir Durrani, Fahim Dalvi, and
+  James Glass. 2019.
+\newblock Identifying and controlling important neurons in neural machine
+  translation.
+\newblock In \emph{International Conference on Learning Representations}.
+
+\bibitem[{Belinkov(2018)}]{belinkov:2018:phdthesis}
+Belinkov, Yonatan. 2018.
+\newblock \emph{On Internal Language Representations in Deep Learning: An
+  Analysis of Machine Translation and Speech Recognition}.
+\newblock Ph.D. thesis, Massachusetts Institute of Technology.
+
+\bibitem[{Belinkov et~al.(2017{\natexlab{a}})Belinkov, Durrani, Dalvi, Sajjad,
+  and Glass}]{belinkov-etal-2017-neural}
+Belinkov, Yonatan, Nadir Durrani, Fahim Dalvi, Hassan Sajjad, and James Glass.
+  2017{\natexlab{a}}.
+\newblock What do neural machine translation models learn about morphology?
+\newblock In \emph{Proceedings of the 55th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 861--872,
+  Association for Computational Linguistics, Vancouver, Canada.
+
+\bibitem[{Belinkov et~al.(2020)Belinkov, Durrani, Dalvi, Sajjad, and
+  Glass}]{belinkov-etal-2020-linguistic}
+Belinkov, Yonatan, Nadir Durrani, Fahim Dalvi, Hassan Sajjad, and James Glass.
+  2020.
+\newblock On the linguistic representational power of neural machine
+  translation models.
+\newblock \emph{Computational Linguistics}, 46(1):1--52.
+
+\bibitem[{Belinkov, Gehrmann, and
+  Pavlick(2020)}]{belinkov-etal-2020-interpretability}
+Belinkov, Yonatan, Sebastian Gehrmann, and Ellie Pavlick. 2020.
+\newblock Interpretability and analysis in neural {NLP}.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics: Tutorial Abstracts}, pages 1--5, Association
+  for Computational Linguistics, Online.
+
+\bibitem[{Belinkov and Glass(2017)}]{NIPS2017_b069b341}
+Belinkov, Yonatan and James Glass. 2017.
+\newblock Analyzing hidden representations in end-to-end automatic speech
+  recognition systems.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~30, pages 2441--2451, Curran Associates, Inc.
+
+\bibitem[{Belinkov and Glass(2019)}]{belinkov-glass-2019-analysis}
+Belinkov, Yonatan and James Glass. 2019.
+\newblock Analysis methods in neural language processing: A survey.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  7:49--72.
+
+\bibitem[{Belinkov et~al.(2017{\natexlab{b}})Belinkov, M{\`a}rquez, Sajjad,
+  Durrani, Dalvi, and Glass}]{belinkov-etal-2017-evaluating}
+Belinkov, Yonatan, Llu{\'\i}s M{\`a}rquez, Hassan Sajjad, Nadir Durrani, Fahim
+  Dalvi, and James Glass. 2017{\natexlab{b}}.
+\newblock Evaluating layers of representation in neural machine translation on
+  part-of-speech and semantic tagging tasks.
+\newblock In \emph{Proceedings of the Eighth International Joint Conference on
+  Natural Language Processing (Volume 1: Long Papers)}, pages 1--10, Asian
+  Federation of Natural Language Processing, Taipei, Taiwan.
+
+\bibitem[{Cao et~al.(2020)Cao, Trivedi, Balasubramanian, and
+  Balasubramanian}]{cao-etal-2020-deformer}
+Cao, Qingqing, Harsh Trivedi, Aruna Balasubramanian, and Niranjan
+  Balasubramanian. 2020.
+\newblock {D}e{F}ormer: Decomposing pre-trained transformers for faster
+  question answering.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics}, pages 4487--4497, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{Cao, Sanh, and Rush(2021)}]{cao2021low}
+Cao, Steven, Victor Sanh, and Alexander Rush. 2021.
+\newblock Low-complexity probing via finding subnetworks.
+\newblock In \emph{Proceedings of the 2021 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies}, pages 960--966, Association for Computational Linguistics,
+  Online.
+
+\bibitem[{Chrupa{\l}a and Alishahi(2019)}]{chrupala-alishahi-2019-correlating}
+Chrupa{\l}a, Grzegorz and Afra Alishahi. 2019.
+\newblock Correlating neural and symbolic representations of language.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics}, pages 2952--2962, Association for
+  Computational Linguistics, Florence, Italy.
+
+\bibitem[{Chrupa{\l}a, Higy, and Alishahi(2020)}]{chrupala-etal-2020-analyzing}
+Chrupa{\l}a, Grzegorz, Bertrand Higy, and Afra Alishahi. 2020.
+\newblock Analyzing analytical methods: The case of phonology in neural models
+  of spoken language.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics}, pages 4146--4156, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{CHU(1965)}]{10030090917}
+CHU, Y. 1965.
+\newblock On the shortest arborescence of a directed graph.
+\newblock \emph{Science Sinica}, 14:1396--1400.
+
+\bibitem[{Clark et~al.(2019)Clark, Khandelwal, Levy, and
+  Manning}]{clark-etal-2019-bert}
+Clark, Kevin, Urvashi Khandelwal, Omer Levy, and Christopher~D. Manning. 2019.
+\newblock What does {BERT} look at? an analysis of {BERT}{'}s attention.
+\newblock In \emph{Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing
+  and Interpreting Neural Networks for NLP}, pages 276--286, Association for
+  Computational Linguistics, Florence, Italy.
+
+\bibitem[{Conneau et~al.(2018)Conneau, Kruszewski, Lample, Barrault, and
+  Baroni}]{conneau-etal-2018-cram}
+Conneau, Alexis, German Kruszewski, Guillaume Lample, Lo{\"\i}c Barrault, and
+  Marco Baroni. 2018.
+\newblock What you can cram into a single {\$}{\&}!{\#}* vector: Probing
+  sentence embeddings for linguistic properties.
+\newblock In \emph{Proceedings of the 56th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 2126--2136,
+  Association for Computational Linguistics, Melbourne, Australia.
+
+\bibitem[{Dalvi et~al.(2020)Dalvi, Sajjad, Durrani, and
+  Belinkov}]{dalvi-etal-2020-analyzing}
+Dalvi, Fahim, Hassan Sajjad, Nadir Durrani, and Yonatan Belinkov. 2020.
+\newblock Analyzing redundancy in pretrained transformer models.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 4908--4926, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{Danilevsky et~al.(2020)Danilevsky, Qian, Aharonov, Katsis, Kawas, and
+  Sen}]{danilevsky-etal-2020-survey}
+Danilevsky, Marina, Kun Qian, Ranit Aharonov, Yannis Katsis, Ban Kawas, and
+  Prithviraj Sen. 2020.
+\newblock A survey of the state of explainable {AI} for natural language
+  processing.
+\newblock In \emph{Proceedings of the 1st Conference of the Asia-Pacific
+  Chapter of the Association for Computational Linguistics and the 10th
+  International Joint Conference on Natural Language Processing}, pages
+  447--459, Association for Computational Linguistics, Suzhou, China.
+
+\bibitem[{Devlin et~al.(2019)Devlin, Chang, Lee, and
+  Toutanova}]{devlin-etal-2019-bert}
+Devlin, Jacob, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019.
+\newblock {BERT}: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock In \emph{Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, pages 4171--4186,
+  Association for Computational Linguistics, Minneapolis, Minnesota.
+
+\bibitem[{Edmonds(1967)}]{edmonds1967optimum}
+Edmonds, Jack. 1967.
+\newblock Optimum branchings.
+\newblock \emph{Journal of Research of the national Bureau of Standards B},
+  71(4):233--240.
+
+\bibitem[{Elazar et~al.(2021)Elazar, Ravfogel, Jacovi, and
+  Goldberg}]{elazar2020amnesic}
+Elazar, Yanai, Shauli Ravfogel, Alon Jacovi, and Yoav Goldberg. 2021.
+\newblock Amnesic probing: Behavioral explanation with amnesic counterfactuals.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  9(0):160--175.
+
+\bibitem[{Ettinger, Elgohary, and Resnik(2016)}]{ettinger-etal-2016-probing}
+Ettinger, Allyson, Ahmed Elgohary, and Philip Resnik. 2016.
+\newblock Probing for semantic evidence of composition by means of simple
+  classification tasks.
+\newblock In \emph{Proceedings of the 1st Workshop on Evaluating Vector-Space
+  Representations for {NLP}}, pages 134--139, Association for Computational
+  Linguistics, Berlin, Germany.
+
+\bibitem[{Feder et~al.(2021)Feder, Oved, Shalit, and
+  Reichart}]{feder2020causalm}
+Feder, Amir, Nadav Oved, Uri Shalit, and Roi Reichart. 2021.
+\newblock {CausaLM: Causal Model Explanation Through Counterfactual Language
+  Models}.
+\newblock \emph{Computational Linguistics}, 47(2):333--386.
+
+\bibitem[{Giulianelli et~al.(2018)Giulianelli, Harding, Mohnert, Hupkes, and
+  Zuidema}]{giulianelli-etal-2018-hood}
+Giulianelli, Mario, Jack Harding, Florian Mohnert, Dieuwke Hupkes, and Willem
+  Zuidema. 2018.
+\newblock Under the hood: Using diagnostic classifiers to investigate and
+  improve how language models track agreement information.
+\newblock In \emph{Proceedings of the 2018 {EMNLP} Workshop {B}lackbox{NLP}:
+  Analyzing and Interpreting Neural Networks for {NLP}}, pages 240--248,
+  Association for Computational Linguistics, Brussels, Belgium.
+
+\bibitem[{Gupta et~al.(2015)Gupta, Boleda, Baroni, and
+  Pad{\'o}}]{gupta-etal-2015-distributional}
+Gupta, Abhijeet, Gemma Boleda, Marco Baroni, and Sebastian Pad{\'o}. 2015.
+\newblock Distributional vectors encode referential attributes.
+\newblock In \emph{Proceedings of the 2015 Conference on Empirical Methods in
+  Natural Language Processing}, pages 12--21, Association for Computational
+  Linguistics, Lisbon, Portugal.
+
+\bibitem[{Hall~Maudslay et~al.(2020)Hall~Maudslay, Valvoda, Pimentel, Williams,
+  and Cotterell}]{hall-maudslay-etal-2020-tale}
+Hall~Maudslay, Rowan, Josef Valvoda, Tiago Pimentel, Adina Williams, and Ryan
+  Cotterell. 2020.
+\newblock A tale of a probe and a parser.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics}, pages 7389--7395, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{Hewitt and Liang(2019)}]{hewitt-liang-2019-designing}
+Hewitt, John and Percy Liang. 2019.
+\newblock Designing and interpreting probes with control tasks.
+\newblock In \emph{Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing and the 9th International Joint Conference on
+  Natural Language Processing (EMNLP-IJCNLP)}, pages 2733--2743, Association
+  for Computational Linguistics, Hong Kong, China.
+
+\bibitem[{Htut et~al.(2019)Htut, Phang, Bordia, and Bowman}]{htut2019attention}
+Htut, Phu~Mon, Jason Phang, Shikha Bordia, and Samuel~R Bowman. 2019.
+\newblock Do attention heads in bert track syntactic dependencies?
+\newblock \emph{arXiv preprint arXiv:1911.12246}.
+
+\bibitem[{Hupkes, Veldhoen, and Zuidema(2018)}]{hupkes2018visualisation}
+Hupkes, Dieuwke, Sara Veldhoen, and Willem Zuidema. 2018.
+\newblock Visualisation and 'diagnostic classifiers' reveal how recurrent and
+  recursive neural networks process hierarchical structure.
+\newblock \emph{Journal of Artificial Intelligence Research}, 61:907--926.
+
+\bibitem[{K{\"o}hn(2015)}]{kohn-2015-whats}
+K{\"o}hn, Arne. 2015.
+\newblock What{'}s in an embedding? analyzing word embeddings through
+  multilingual evaluation.
+\newblock In \emph{Proceedings of the 2015 Conference on Empirical Methods in
+  Natural Language Processing}, pages 2067--2073, Association for Computational
+  Linguistics, Lisbon, Portugal.
+
+\bibitem[{Kriegeskorte, Mur, and Bandettini(2008)}]{10.3389/neuro.06.004.2008}
+Kriegeskorte, Nikolaus, Marieke Mur, and Peter Bandettini. 2008.
+\newblock Representational similarity analysis - connecting the branches of
+  systems neuroscience.
+\newblock \emph{Frontiers in Systems Neuroscience}, 2:4.
+
+\bibitem[{Krishna, Toshniwal, and Livescu(2019)}]{krishna2018hierarchical}
+Krishna, Kalpesh, Shubham Toshniwal, and Karen Livescu. 2019.
+\newblock Hierarchical multitask learning for {CTC}-based speech recognition.
+\newblock \emph{arXiv preprint arXiv:1807.06234}.
+
+\bibitem[{Lakretz et~al.(2019)Lakretz, Kruszewski, Desbordes, Hupkes, Dehaene,
+  and Baroni}]{lakretz-etal-2019-emergence}
+Lakretz, Yair, German Kruszewski, Theo Desbordes, Dieuwke Hupkes, Stanislas
+  Dehaene, and Marco Baroni. 2019.
+\newblock The emergence of number and syntax units in {LSTM} language models.
+\newblock In \emph{Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, pages 11--20, Association
+  for Computational Linguistics, Minneapolis, Minnesota.
+
+\bibitem[{Lepori and McCoy(2020)}]{lepori-mccoy-2020-picking}
+Lepori, Michael and R.~Thomas McCoy. 2020.
+\newblock Picking {BERT}{'}s brain: Probing for linguistic dependencies in
+  contextualized embeddings using representational similarity analysis.
+\newblock In \emph{Proceedings of the 28th International Conference on
+  Computational Linguistics}, pages 3637--3651, International Committee on
+  Computational Linguistics, Barcelona, Spain (Online).
+
+\bibitem[{Liu et~al.(2019)Liu, Gardner, Belinkov, Peters, and
+  Smith}]{liu-etal-2019-linguistic}
+Liu, Nelson~F., Matt Gardner, Yonatan Belinkov, Matthew~E. Peters, and Noah~A.
+  Smith. 2019.
+\newblock Linguistic knowledge and transferability of contextual
+  representations.
+\newblock In \emph{Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, pages 1073--1094,
+  Association for Computational Linguistics, Minneapolis, Minnesota.
+
+\bibitem[{Lovering et~al.(2021)Lovering, Jha, Linzen, and
+  Pavlick}]{lovering2021predicting}
+Lovering, Charles, Rohan Jha, Tal Linzen, and Ellie Pavlick. 2021.
+\newblock Predicting inductive biases of pre-trained models.
+\newblock In \emph{International Conference on Learning Representations}.
+
+\bibitem[{Mare{\v{c}}ek and Rosa(2019)}]{marecek-rosa-2019-balustrades}
+Mare{\v{c}}ek, David and Rudolf Rosa. 2019.
+\newblock From balustrades to pierre vinken: Looking for syntax in transformer
+  self-attentions.
+\newblock In \emph{Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing
+  and Interpreting Neural Networks for NLP}, pages 263--275, Association for
+  Computational Linguistics, Florence, Italy.
+
+\bibitem[{Michael, Botha, and Tenney(2020)}]{michael-etal-2020-asking}
+Michael, Julian, Jan~A. Botha, and Ian Tenney. 2020.
+\newblock Asking without telling: Exploring latent ontologies in contextual
+  representations.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 6792--6812, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{Pimentel et~al.(2020{\natexlab{a}})Pimentel, Saphra, Williams, and
+  Cotterell}]{pimentel-etal-2020-pareto}
+Pimentel, Tiago, Naomi Saphra, Adina Williams, and Ryan Cotterell.
+  2020{\natexlab{a}}.
+\newblock {P}areto probing: {T}rading off accuracy for complexity.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 3138--3153, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{Pimentel et~al.(2020{\natexlab{b}})Pimentel, Valvoda, Hall~Maudslay,
+  Zmigrod, Williams, and Cotterell}]{pimentel-etal-2020-information}
+Pimentel, Tiago, Josef Valvoda, Rowan Hall~Maudslay, Ran Zmigrod, Adina
+  Williams, and Ryan Cotterell. 2020{\natexlab{b}}.
+\newblock Information-theoretic probing for linguistic structure.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics}, pages 4609--4622, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{Raganato and Tiedemann(2018)}]{raganato-tiedemann-2018-analysis}
+Raganato, Alessandro and J{\"o}rg Tiedemann. 2018.
+\newblock An analysis of encoder representations in transformer-based machine
+  translation.
+\newblock In \emph{Proceedings of the 2018 {EMNLP} Workshop {B}lackbox{NLP}:
+  Analyzing and Interpreting Neural Networks for {NLP}}, pages 287--297,
+  Association for Computational Linguistics, Brussels, Belgium.
+
+\bibitem[{Ravichander, Belinkov, and Hovy(2021)}]{ravichander:2021:eacl}
+Ravichander, Abhilasha, Yonatan Belinkov, and Eduard Hovy. 2021.
+\newblock Probing the probing paradigm: Does probing accuracy entail task
+  relevance?
+\newblock In \emph{Proceedings of the 16th Conference of the European Chapter
+  of the Association for Computational Linguistics: Main Volume}, pages
+  3363--3377, Association for Computational Linguistics, Online.
+
+\bibitem[{Rogers, Kovaleva, and Rumshisky(2020)}]{rogers-etal-2020-primer}
+Rogers, Anna, Olga Kovaleva, and Anna Rumshisky. 2020.
+\newblock A primer in {BERT}ology: What we know about how {BERT} works.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  8:842--866.
+
+\bibitem[{Shi, Padhi, and Knight(2016)}]{shi-etal-2016-string}
+Shi, Xing, Inkit Padhi, and Kevin Knight. 2016.
+\newblock Does string-based neural {MT} learn source syntax?
+\newblock In \emph{Proceedings of the 2016 Conference on Empirical Methods in
+  Natural Language Processing}, pages 1526--1534, Association for Computational
+  Linguistics, Austin, Texas.
+
+\bibitem[{Tamkin et~al.(2020)Tamkin, Singh, Giovanardi, and
+  Goodman}]{tamkin-etal-2020-investigating}
+Tamkin, Alex, Trisha Singh, Davide Giovanardi, and Noah Goodman. 2020.
+\newblock Investigating transferability in pretrained language models.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  EMNLP 2020}, pages 1393--1401, Association for Computational Linguistics,
+  Online.
+
+\bibitem[{Tenney et~al.(2019)Tenney, Xia, Chen, Wang, Poliak, McCoy, Kim,
+  Durme, Bowman, Das, and Pavlick}]{tenney2018what}
+Tenney, Ian, Patrick Xia, Berlin Chen, Alex Wang, Adam Poliak, R~Thomas McCoy,
+  Najoung Kim, Benjamin~Van Durme, Sam Bowman, Dipanjan Das, and Ellie Pavlick.
+  2019.
+\newblock What do you learn from context? probing for sentence structure in
+  contextualized word representations.
+\newblock In \emph{International Conference on Learning Representations}.
+
+\bibitem[{Tucker, Qian, and Levy(2021)}]{tucker2021modified}
+Tucker, Mycal, Peng Qian, and Roger Levy. 2021.
+\newblock What if this modified that? syntactic interventions with
+  counterfactual embeddings.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL-IJCNLP 2021}, pages 862--875, Association for Computational Linguistics,
+  Online.
+
+\bibitem[{Vanmassenhove, Du, and Way(2017)}]{VanmassenhoveDuWay2017}
+Vanmassenhove, Eva, Jinhua Du, and Andy Way. 2017.
+\newblock Investigating `aspect' in {NMT} and {SMT}: Translating the english
+  simple past and present perfect.
+\newblock \emph{Computational Linguistics in the Netherlands Journal},
+  7:109--128.
+
+\bibitem[{Veldhoen, Hupkes, and Zuidema(2016)}]{veldhoen2016diagnostic}
+Veldhoen, Sara, Dieuwke Hupkes, and Willem~H Zuidema. 2016.
+\newblock Diagnostic classifiers revealing how neural networks process
+  hierarchical structure.
+\newblock In \emph{CoCo@ NIPS}.
+
+\bibitem[{Vig et~al.(2020)Vig, Gehrmann, Belinkov, Qian, Nevo, Singer, and
+  Shieber}]{vig:2020:neurips}
+Vig, Jesse, Sebastian Gehrmann, Yonatan Belinkov, Sharon Qian, Daniel Nevo,
+  Yaron Singer, and Stuart Shieber. 2020.
+\newblock Investigating gender bias in language models using causal mediation
+  analysis.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~33, pages 12388--12401, Curran Associates, Inc.
+
+\bibitem[{Voita and Titov(2020)}]{voita-titov-2020-information}
+Voita, Elena and Ivan Titov. 2020.
+\newblock Information-theoretic probing with minimum description length.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 183--196, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{Wallace, Gardner, and Singh(2020)}]{wallace-etal-2020-interpreting}
+Wallace, Eric, Matt Gardner, and Sameer Singh. 2020.
+\newblock Interpreting predictions of {NLP} models.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing: Tutorial Abstracts}, pages 20--23, Association
+  for Computational Linguistics, Online.
+
+\bibitem[{Wu et~al.(2020)Wu, Chen, Kao, and Liu}]{wu-etal-2020-perturbed}
+Wu, Zhiyong, Yun Chen, Ben Kao, and Qun Liu. 2020.
+\newblock Perturbed masking: Parameter-free probing for analyzing and
+  interpreting {BERT}.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics}, pages 4166--4176, Association for
+  Computational Linguistics, Online.
+
+\bibitem[{Zhang and Bowman(2018)}]{zhang-bowman-2018-language}
+Zhang, Kelly and Samuel Bowman. 2018.
+\newblock Language modeling teaches you more than translation does: Lessons
+  learned through auxiliary syntactic task analysis.
+\newblock In \emph{Proceedings of the 2018 {EMNLP} Workshop {B}lackbox{NLP}:
+  Analyzing and Interpreting Neural Networks for {NLP}}, pages 359--361,
+  Association for Computational Linguistics, Brussels, Belgium.
+
+\bibitem[{Zhang et~al.(2021)Zhang, Warstadt, Li, and
+  Bowman}]{zhang-etal-2021-need}
+Zhang, Yian, Alex Warstadt, Xiaocheng Li, and Samuel~R. Bowman. 2021.
+\newblock When do you need billions of words of pretraining data?
+\newblock In \emph{Proceedings of the 59th Annual Meeting of the Association
+  for Computational Linguistics and the 11th International Joint Conference on
+  Natural Language Processing (Volume 1: Long Papers)}, pages 1112--1125,
+  Association for Computational Linguistics, Online.
+
+\bibitem[{Zhou and Srikumar(2021)}]{zhou-srikumar-2021}
+Zhou, Yichu and Vivek Srikumar. 2021.
+\newblock {D}irect{P}robe: Studying representations without classifiers.
+\newblock In \emph{Proceedings of the 2021 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies}, pages 5070--5083, Association for Computational Linguistics,
+  Online.
+
+\bibitem[{Zhu and Rudzicz(2020)}]{zhu-rudzicz-2020-information}
+Zhu, Zining and Frank Rudzicz. 2020.
+\newblock An information theoretic view on selecting linguistic probes.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 9251--9262, Association for
+  Computational Linguistics, Online.
+
+\end{thebibliography}

@@ -1,0 +1,22 @@
+\begin{table*}[t]
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.5\textwidth}{!}{
+    \begin{tabular}{l|cc|c}
+        \toprule
+        ~ & \multicolumn{2}{c}{\textbf{Objective}} & \textbf{Subjective}  \\
+        Tokenizer & WER$\downarrow$ & VISQOL$\uparrow$ & MUSHRA$\uparrow$ \\
+        \midrule
+        Groundtruth & 4.58 & - & 91.46 \\
+        \midrule
+        EnCodec & 5.11 & 4.37 &  79.86\\
+        \method & 5.04 & 4.30 &  90.55\\
+        \bottomrule
+    \end{tabular}}
+    \caption{Results of speech reconstruction
+    }
+    \label{tab:speech_reconstruction}
+    % \vspace{-0.3em}
+\end{table*}

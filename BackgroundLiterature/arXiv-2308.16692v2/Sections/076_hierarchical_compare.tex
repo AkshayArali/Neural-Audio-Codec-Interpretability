@@ -1,0 +1,5 @@
+
+
+In the acoustic modeling stage, we have chosen to implement SoundStorm, as reported by \citep{borsos2023soundstorm}, due to its superior audio generation capabilities in both quality and sequence length. SoundStorm also offers a significant speed advantage, being two orders of magnitude faster than autoregressive modeling. Our approach involves using SoundStorm to predict codec tokens (as detailed in \citep{défossez2022high} and \citep{zeghidour2021soundstream}), with semantic tokens serving as a conditioning signal.
+
+We followed the structure, masking scheme, and iterative parallel decoding as outlined in the \citep{borsos2023soundstorm} paper. Specifically, at the input side, we interleave the time-aligned conditioning tokens with the codec tokens at the frame level, embed the resulting squence, sum the embeddings corresponding to the same frame, including the embedding of the conditioning token, and pass the resulting continuous embeddings to a Conformer with bidirectional self-attention.

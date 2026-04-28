@@ -1,0 +1,24 @@
+
+\noindent\textbf{Discrete Speech Representations}~ There are two popular speech discrete representations: semantic tokens and
+acoustic tokens. Semantic tokens can be extracted from self-supervised learning of speech representations~\citep{hsu2021hubert, chung2021w2vbert} and encode high-level representations that
+correlate with coarse, symbolic features while paralinguistic information such as
+speaker identity and acoustic details are removed. Acoustic tokens can be extracted from neural audio codec~\citep{zeghidour2021soundstream,défossez2022high,yang2023hificodec} and provide high-fidelity reconstruction of the acoustic details. But they can not decouple different information of speech. \method unifies the two types of tokens, enabling both high-quality audio reconstruction and decomposition of different information of speech.
+
+\noindent\textbf{Spoken Generative Language Models}~
+Speech discrete representation based spoken generative language models have demonstrated remarkable performance on various speech processing tasks~\citep{borsos2022audiolm, wang2023neural, kharitonov2023speak,zhang2023speechgpt}. AudioLM~\citep{borsos2022audiolm} proposes to model speech based on audio codecs together
+with semantic codes, which can synthesize speech in a textlesss setting.
+VALL-E~\citep{wang2023neural} leverages neural codec models to represent
+speech in discrete tokens from eight quantizers. VALL-E comprises of an autoregressive language model that converts phoenmes to acoustic tokens from the first quantizer and an non-autoregressive language model to generate codes of the other seven quantizers. However, VALL-E suffers from problems that some words may be unclear, missed, or duplicated in
+speech synthesis due to the information gap between acoustic tokens and phoneme. To bridge the gap, SPEAR-TTS~\citep{kharitonov2023speak} uses semantic tokens as a bridge between text and acoustic tokens.
+It first generates semantic tokens from text and then produces acoustic tokens from semantic tokens. However, this multi-stage modeling approach is more complex and can lead to problems like error accumulation and slow inference speed. 
+The first quantizer of \method generates semantic tokens, while the remaining seven quantizers produce acoustic tokens by modeling the paralinguistic information lost in the semantic tokens. \method-based VALL-E combines the advantages of VALL-E and SPEAR-TTS, where the autoregressive model can perform text-to-semantic tokens conversion, and the non-autoregressive model can achieve semantic-to-acoustic tokens conversion.
+
+
+\noindent\textbf{Speech Representation Disentanglement}~
+Human speech can be roughly decomposed into three components: content, timbre, and prosody~\citep{liu2023unifyspeech}. Content represents the main information in the speech, which can be expressed using text or phonemes. Timbre represents the speaker's characteristics, while prosody encompasses intonation, stress, and rhythm of speech, reflecting how the speaker conveys the content information.
+Current Speech Representation Disentanglement (SRD) methods mostly separate speaker information from content information for voice conversion~\citep{qian2019autovc,pmlr-v162-casanova22a}. These approaches adopt a parallel disentanglement strategy, where the speech is fed into parallel content and speaker encoders to obtain different representations~\citep{qian2020unsupervised}. However, this strategy heavily relies on prior knowledge and introduces strong inductive biases, making the modeling process more complex and potentially overlooking certain speech information like prosody. 
+Differently, VQVC~\citep{wu2020one} models the content embedding as a series of discrete codes and take the difference between
+quantize-before and quantize-after vector as the speaker embedding.
+Similarly, \method utilizes a residual structure to perform serial decomposition of speech information and models different information as discrete tokens.
+
+

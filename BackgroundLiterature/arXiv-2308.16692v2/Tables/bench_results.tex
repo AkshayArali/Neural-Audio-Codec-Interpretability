@@ -1,0 +1,60 @@
+% \begin{table*}[t]
+%     % \setlength{\abovecaptionskip}{-0.cm}
+%     \setlength{\belowcaptionskip}{-0.2cm}
+%     % \renewcommand{\arraystretch}{1.2}
+%     \Large
+%     \centering
+%     \resizebox{0.9\textwidth}{!}{
+%     \begin{tabular}{l|ccc|ccc}
+%         \toprule
+%         ~ & \multicolumn{3}{c}{\textbf{Content}} & \multicolumn{3}{c}{\textbf{Timbre}}  \\
+%         ~ & \multicolumn{2}{c}{DSRIBench} & Reconstruction &
+%         \multicolumn{2}{c}{DSRIBench} & Reconstruction \\
+%         ~ & MI & WER & WER& MI & ACC & SIM \\
+%         \midrule
+%         EnCodec-L1 & 16.5 & 61.52 & 38.34 & 6.52 & 0.44 & 0.92 \\
+%         EnCodec-All & 23.6 & 30.91 & 5.11 & 14.7 & 0.94 & 0.98 \\
+%         \method-L1 & & & 9.57 & & & 0.74 \\
+%         \method-L2:8 & & & 86.58 & & & 0.79 \\
+%         \method-all & & & 5.04 & & & 0.97 \\
+%         \bottomrule
+%     \end{tabular}}
+%     \caption{Results of speech disentanglement.
+%     }
+%     \label{tab:speech_disentanglement}
+% \end{table*}
+
+
+\begin{table*}[t]
+    % \setlength{\abovecaptionskip}{-0.cm}
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.9\textwidth}{!}{
+    \begin{tabular}{lcc|cc|cc}
+        \toprule
+        ~ & & & \multicolumn{2}{c}{\textbf{Text Alignment}} & \multicolumn{2}{c}{\textbf{Information Preservation}}   \\
+        Tokenizer & & Teacher & MI$\uparrow$ & WER$^{\dagger}\downarrow$ & WER$^{\ast}\downarrow$ & SIM$\uparrow$\\
+        \midrule
+        Groundtruth & & & - & - & 4.58 & 1.0 \\
+        HuBERT & KM500 & - & 31.2 & 9.88 &16.26 & 0.77\\
+        EnCodec & RVQ-1 & - & 16.5 & 61.52 & 38.34 & 0.92 \\
+        EnCodec & RVQ-1:8 & - & 23.6 & 30.91 & 5.11 & 0.98 \\
+        \midrule
+        \textit{Ablations} & & & & & & \\
+        \method & RVQ-1 & HuBERT avg  & 30.9 & 15.58 & 9.57 & 0.74 \\
+        \method & RVQ-1:8 & HuBERT avg &29.7  & 16.03 & 5.04 & 0.97 \\
+        \method & RVQ-1 & HuBERT L9 & 32.9 & 12.68 & 14.17&0.73  \\
+        \method & RVQ-1:8 & HuBERT L9 & 31.6 & 13.12 & 5.31 & 0.97 \\
+        \method & RVQ-1 & HuBERT units & 24.2 & 34.13 & 20.02 & 0.72 \\
+        \method & RVQ-1:8 & HuBERT units & 25.1 & 30.71 & 5.84 & 0.95 \\
+        
+        
+        \bottomrule
+    \end{tabular}}
+    \caption{Results on \bench. MI and WER$^{\dagger}$ refer to mutual information and word error rate of the downstream model. WER$^{\ast}$ and SIM refer to word error rate and speaker similarity of resynthesized speech respectively. RVQ-$n$ denotes the tokens of the $n^{th}$ RVQ layer. RVQ-$n$:$m$ denotes the tokens from the $n^{th}$ layer to the $m^{th}$ layer.
+    }
+    \label{tab:bench_results}
+\vspace{-0.1em}
+\end{table*}

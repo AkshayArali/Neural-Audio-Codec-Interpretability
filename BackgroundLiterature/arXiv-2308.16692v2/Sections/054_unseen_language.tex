@@ -1,0 +1,11 @@
+
+
+% \input{Tables/chinese_bench}
+
+Since the paralinguistic information is considered to be language-agnostic, we attempted to apply \method directly to unseen languages. We choose German and Chinese. For German, we select samples from the German subset of Multilingual LibriSpeech dataset for testing. For Chinese, we select samples from the Aishell-3 dataset~\citep{shi2021aishell3} for testing. We resynthesize speech from RVQ-1 and RVQ-1:8 tokens. Resynthesized speech are displayed in our demo website~\footnote{\url{https://0nutation.github.io/SpeechTokenizer.github.io/}}. We also analysis the melspectrogram of German speech and English speech in Appendix~\ref{sec:app:mel}.
+
+Results show that for languages either closely or distantly related to English, resynthesized speech from RVQ-1 tokens tend to lose timbre and prosody information while maintaining clear content. The resynthesized speech generated from RVQ-1:8 tokens is very close to the grountruth. That suggests \method can achieve hierarchical information disentanglement on unseen language, even though \method is trained solely on English data. We believe that \method may possess the ability to extract content from speech while disregarding language-dependent features. This ability holds promise for the development of a multilingual \method.
+
+% Chinese, which is significantly different from English. Since \bench is designed for English speech, we first establish a Chinese-\bench, which is identical to \bench except for the dataset configurations. For the text alignment, we use Aishell-3 dataset for both training and testing. For the information preservation, we select 300 samples from the Aishell-3 dataset for testing.
+
+% Table~\ref{tab:chinese_bench} shows performance of \method on Chinese-\bench. 

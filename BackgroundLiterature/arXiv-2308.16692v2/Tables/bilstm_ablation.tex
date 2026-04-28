@@ -1,0 +1,25 @@
+\begin{table*}[h]
+    % \setlength{\abovecaptionskip}{-0.cm}
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.8\textwidth}{!}{
+    \begin{tabular}{lc|cc|cc}
+        \toprule
+        ~ &  & \multicolumn{2}{c}{\textbf{Text Alignment}} & \multicolumn{2}{c}{\textbf{Information Preservation}}   \\
+         Model Structure&  & MI$\uparrow$ & WER$^{\dagger}\downarrow$ & WER$^{\ast}\downarrow$ & SIM$\uparrow$\\
+        \midrule
+        CNN+LSTM  &RVQ-1 & 27.60 & 20.71  & 9.06 & 0.74 \\
+          &RVQ-1:8&28.61  & 20.38  & 5.44 & 0.97 \\
+        CNN+BiLSTM &RVQ-1 & 30.9 & 15.58 & 9.57&0.74  \\
+         &RVQ-1:8& 29.7 & 16.03 & 5.04 & 0.97 \\
+        
+        
+        \bottomrule
+    \end{tabular}}
+    \caption{Results of BiLSTM ablation experiment on \bench. We employ the average representation across all HuBERT layers as semantic teachers in this experiment.
+    }
+    \label{tab:bilstm_ablation}
+\vspace{-0.5em}
+\end{table*}

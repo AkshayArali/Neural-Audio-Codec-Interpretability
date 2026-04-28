@@ -1,0 +1,39 @@
+% \begin{table*}[t]
+%     \setlength{\belowcaptionskip}{-0.2cm}
+%     % \renewcommand{\arraystretch}{1.2}
+%     \Large
+%     \centering
+%     \resizebox{0.7\textwidth}{!}{
+%     \begin{tabular}{lc|ccc}
+%         \toprule
+%         Tokenizer &   & Phone Purity & Code Purity & PNMI  \\
+%         \midrule
+%         HuBERT & KM500 & & &  \\
+%         EnCodec & RVQ-1 & 0.29 & 0.24 & 0.28 \\
+%         \method & RVQ-1 &  0.67 & 0.10 & 0.71 \\
+%         \bottomrule
+%     \end{tabular}}
+%     \caption{PNMI of different discrete speech representation.
+%     }
+%     \label{tab:pnmi}
+% \end{table*}
+
+\begin{table*}[h]
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.4\textwidth}{!}{
+    \begin{tabular}{lc|ccc}
+        \toprule
+        Tokenizer &  & PNMI$\uparrow$  \\
+        \midrule
+        HuBERT & KM500 &  0.43 \\
+        EnCodec & RVQ-1 & 0.28 \\
+        \method & RVQ-1 & 0.71 \\
+        \bottomrule
+    \end{tabular}}
+    \caption{PNMI of different discrete speech representation.
+    }
+    \label{tab:pnmi}
+\end{table*}

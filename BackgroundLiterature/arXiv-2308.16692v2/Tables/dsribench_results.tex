@@ -1,0 +1,43 @@
+% \begin{table*}[h]
+%     % \setlength{\abovecaptionskip}{-0.cm}
+%     \setlength{\belowcaptionskip}{-0.2cm}
+%     % \renewcommand{\arraystretch}{1.2}
+%     \Large
+%     \centering
+%     \resizebox{0.7\textwidth}{!}{
+%     \begin{tabular}{l|cc|cc|cc}
+%         \toprule
+%         ~ & \multicolumn{2}{c}{\textbf{Content}} & \multicolumn{2}{c}{\textbf{Timbre}}  & \multicolumn{2}{c}{\textbf{Paralinguistics}} \\
+%         ~ & MI & WER & MI& ACC & MI & ACC \\
+%         \midrule
+%         Semantic tokens &31.2 &9.88 & 9.9& 0.66 & 3.3 & 0.50 \\
+%         Acoustic tokens~(RVQ-1) &16.5 &61.52 &6.52 &0.44 &1.8 & 0.50\\
+%         Acoustic tokens~(RVQ-8) & 23.6 & 30.91 & 14.7 & 0.94 & 1.6 & 0.49 \\
+%         \bottomrule
+%     \end{tabular}}
+%     \caption{Results of semantic tokens and acoustic tokens on DSRIBench.
+%     }
+%     \label{tab:disrbench_results}
+% \end{table*}
+
+\begin{table*}[h]
+    % \setlength{\abovecaptionskip}{-0.cm}
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.6\textwidth}{!}{
+    \begin{tabular}{lc|cc|cc}
+        \toprule
+        ~ & & \multicolumn{2}{c}{\textbf{TA}} & \multicolumn{2}{c}{\textbf{IP}}   \\
+        ~ & & MI & WER$^{\dagger}$ & WER$^{\ast}$ & SIM\\
+        \midrule
+        Semantic tokens & & \textbf{31.2} & \textbf{9.88} & & \\
+        Acoustic tokens & RVQ-1 & 16.5 & 61.52 & 38.34 & 0.92 \\
+        Acoustic tokens & RVQ-8 & 23.6 & 30.91 & \textbf{5.11} & \textbf{0.98} \\
+        \bottomrule
+    \end{tabular}}
+    \caption{Results of semantic tokens and acoustic tokens on DSRIBench. TA refers to text alignment and IP denotes information preservation. MI and WER$^{\dagger}$ refer to mutual information and word error rate of the downstream model. WER$^{\ast}$ and SIM refer to word error rate and speaker similarity of resynthesized speech respectively.
+    }
+    \label{tab:disrbench_results}
+\end{table*}

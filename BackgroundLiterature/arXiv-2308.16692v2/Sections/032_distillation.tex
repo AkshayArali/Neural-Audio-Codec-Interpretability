@@ -1,0 +1,54 @@
+% \begin{algorithm}
+% \caption{\method}
+% \begin{algorithmic}[1]
+% \State Initialize codebook $C$ with random vectors
+% \State Initialize maximum number of iterations $T$
+% \For{$t = 1$ to $T$}
+%     \State Encode: Assign each input vector $x_i$ to the nearest codeword $c_j$ in $C$
+%     \State Compute residuals: $r_i = x_i - c_j$
+%     \State Update codewords: $c_j = c_j + \alpha \cdot r_i$ (where $\alpha$ is a learning rate)
+% \EndFor
+% \end{algorithmic}
+% \end{algorithm}
+
+To achieve a hierarchical modeling of diverse information across different RVQ layers, we employ semantic guidance for the first quantizer, enabling it to capture content information. Leveraging a residual structure enables the subsequent quantizers to complement the remaining paralinguistic information.
+
+We employ HuBERT~\citep{hsu2021hubert} as our semantic teacher in this study, as HuBERT is demonstrated to encompass substantial content information~\citep{Mohamed_2022}. We introduce two types of distillation: continuous representation distillation and pseudo-label prediction. 
+
+For continuous representation distillation, we employ the 9th layer HuBERT representation or the average representation across all HuBERT layers as semantic teachers. The training objective is to maximize the cosine similarity at the dimension level across all timesteps between the outputs of RVQ first layer and semantic teacher representations. Formally, the continuous distillation loss is defined as:
+\begin{align*}
+    \mathcal{L}_{distill}=-\frac{1}{D}\sum_{d=1}^D\log\sigma(cos(\mathbf{AQ}_1^{(:,d)}, \mathbf{S}^{(:,d)})),
+\end{align*}
+where $\mathbf{Q}_1$ and $\mathbf{S}$ denote the quantized output of RVQ first layer and semantic teacher representation respectively. $\mathbf{A}$ denotes the projection matrix and $D$ is the dimension of semantic teacher representation. The superscript $(:,d)$ signifies a vector comprising values from all timesteps at dimension $d$. $\cos(\cdot)$ represents cosine similarity and $\sigma(\cdot)$ denotes sigmoid activation.  This continuous distillation loss function deviates from the commonly employed approach, which calculates the loss based on the representations output by the student and teacher models at the same timestep. A comparative analysis of these two methodologies is provided in Appendix \ref{sec:app:distll_loss}.%这一连续蒸馏损失函数有别于过去常见的对两个模型在同一时刻输出表示上求loss的方式，我们在Appendix \ref{sec:app:distll_loss}中比较这两种方式的优劣。
+
+% The training objective of this approach can be written as:
+% \begin{align}
+% \mathcal{L}_{distll}=-\frac{1}{T}\sum_{t=1}^T\log{\sigma(\cos{(Aq_1^t, s^t)})},
+% \end{align}
+% where $q_1^t$ and $s^t$ respectively denote the quantized output of the first VQ layer and the semantic teacher representation at timestep t. $\cos(\cdot)$ is cosine similarity. $T$ denotes the number of time steps and $A$ is the projection matrix. $\sigma(\cdot)$ denotes sigmoid activation.
+
+For pseudo-label prediction, we adopt HuBERT units as the target label. The training objective is constructed as:
+% \begin{align}
+% \mathcal{L}_{distll}=\frac{1}{T}\sum_{t=1}^TCE({\sigma(Aq_1^t), u^t}),
+% \end{align}
+\begin{align*}
+% \mathcal{L}_{distll}=\frac{1}{T}\sum_{t=1}^TCE({Aq_1^t, u^t}),\\
+\mathcal{L}_{distll}=-\frac{1}{T}\sum_{t=1}^T \mathbf{u}^t\log(\text{Softmax}(\mathbf{Aq}_1^t)),
+\end{align*}
+where $\mathbf{q}_1^t$ and $\mathbf{u}^t$ respectively denote the quantized output of the first VQ layer and the HuBERT unit at timestep t. $T$ denotes the number of time steps and $\mathbf{A}$ is the projection matrix.    
+% $\sigma(\cdot)$ and $\cos{(\cdot, \cdot)}$ respectively denote sigmoid activation and cosine similarity.
+% Since a single output layer might not always provide rich information, we compute the average output across all $L$ hidden layers to create the semantic teacher representation $s$:
+% \begin{align*}
+% s=\frac{1}{L}\sum_{j=1}^{L}s_j
+% \end{align*}
+% where $s_j$ denotes the representation from the $j^{th}$ layer.
+
+% For semantic distillation, we choose the cosine similarity as objective, which can be written as:
+
+
+% We consider the encoder output $z_1$ to contain all aspects of speech information, we have
+% \begin{align*}
+%     z_2 = z_1 - q_1
+% \end{align*}
+% because $q_1$ captures content information under the semantic teacher guidance, $z_{2}$ contains the remaining paralinguistic information, which is sent to subsequent VQ layers.
+

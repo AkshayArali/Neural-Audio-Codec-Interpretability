@@ -1,0 +1,24 @@
+\begin{table*}[t]
+    % \setlength{\abovecaptionskip}{-0.cm}
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.8\textwidth}{!}{
+    \begin{tabular}{lc|cc|cc}
+        \toprule
+        ~ & & \multicolumn{2}{c}{\textbf{Text Alignment}} & \multicolumn{2}{c}{\textbf{Information Preservation}}   \\
+        Tokenizer & &  MI & CER$^{\dagger}$ & CER$^{\ast}$ & SIM\\
+        \midrule
+        EnCodec & RVQ-1 &  &  &  & 0.89 \\
+        EnCodec & RVQ-8 &  &  &  & 0.97 \\
+        % \midrule
+        \method & RVQ-1 &  &  &  & 0.65 \\
+        \method & RVQ-8 &  &  &  & 0.95 \\
+    
+        \bottomrule
+    \end{tabular}}
+    \caption{ Results on Chinese-\bench . MI and CER$^{\dagger}$ refer to mutual information and character error rate of the downstream model. CER$^{\ast}$ and SIM refer to character error rate and speaker similarity of resynthesized speech respectively.
+    }
+    \label{tab:chinese_bench}
+\end{table*}

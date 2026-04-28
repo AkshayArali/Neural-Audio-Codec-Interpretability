@@ -1,0 +1,25 @@
+\begin{table*}[h]
+    % \setlength{\abovecaptionskip}{-0.cm}
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.8\textwidth}{!}{
+    \begin{tabular}{lc|cc|cc}
+        \toprule
+        ~ &  & \multicolumn{2}{c}{\textbf{Text Alignment}} & \multicolumn{2}{c}{\textbf{Information Preservation}}   \\
+         $\mathcal{L}_{distill}$&  & MI$\uparrow$ & WER$^{\dagger}\downarrow$ & WER$^{\ast}\downarrow$ & SIM$\uparrow$\\
+        \midrule
+        T-Axis  &RVQ-1 & 26.65 & 21.10  & 10.75 & 0.76 \\
+          &RVQ-1:8&25.97  & 21.54  & 5.29 & 0.96 \\
+        D-Axis &RVQ-1 & 30.9 & 15.58 & 9.57&0.74  \\
+         &RVQ-1:8& 29.7 & 16.03 & 5.04 & 0.97 \\
+        
+        
+        \bottomrule
+    \end{tabular}}
+    \caption{Results of continuous distillation loss ablation experiment on \bench. We employ the average representation across all HuBERT layers as semantic teachers in this experiment.
+    }
+    \label{tab:loss_ablation}
+\vspace{-0.5em}
+\end{table*}

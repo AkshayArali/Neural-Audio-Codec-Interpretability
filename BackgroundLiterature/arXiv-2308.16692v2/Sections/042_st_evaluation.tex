@@ -1,0 +1,14 @@
+We randomly sample 300 speech samples from LibriSpeech test set for speech reconstruction evaluation.
+We take into account both subjective and objective evaluation metrics.
+
+\textbf{Objective Metrics}~
+We use ViSQOL metrics~\citep{6309421} to measure the speech quality. Additionally, we evaluate content accuracy through Word Error Rate~(WER) by transcribing the speech utilizing the Whisper en-medium model~\citep{radford2023robust}.
+
+\textbf{Subjective Metrics}~
+ We adopt a crowd-sourced methodology inpspired by MUSHRA protocol~\citep{series2014method}, with a hidden reference but no lowerpass-filtered anchor, for subjective evaluation. We instruct evaluators to rate the perceptual quality of the given samples on a scale of 1 to 100. 
+
+
+
+% \textbf{Speech Disentanglement Evaluation}~
+% We assess the information content of discrete representations through the performance on DSRIBench. Further details about DSRIBench can be found in Section~\ref{sec:027_bench_resys}. 
+% To evaluate the resynthesized speech, we establish automated metrics to measure both content and timbre preservation. 

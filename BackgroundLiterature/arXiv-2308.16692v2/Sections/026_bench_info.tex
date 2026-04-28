@@ -1,0 +1,56 @@
+
+% Mutual Information is a measure of how much the knowledge of one variable reduces the uncertainty about another variable. It quantifies the level of dependence or relationship between the variables.
+We evaluate the degree of text alignment by estimating the mutual information between speech tokens and text. 
+For notation, $\mathbf{X}$ denotes discrete speech representations; $\mathbf{Y}$ denotes text; $\mathcal{I}(\mathbf{X};\mathbf{Y})$ denotes the mutual information; test dataset is denoted as $\mathcal{D} =\{(x_i, y_i)\}_{i=1}^{N}$ and $\theta$ denotes the downstream model. Through the derivation in Appendix~\ref{sec:app:mi_estimation}, we can estimate
+$\mathcal{I}(\mathbf{X};\mathbf{Y})$ as:
+\begin{align*}
+    \mathcal{\hat{I}}(\mathbf{X};\mathbf{Y})=\frac{1}{N^2}\sum_{i=1}^{N}\sum_{j=1}^{N}[\log q_{\theta}(y_i|x_i)-\log q_{\theta}(y_j|x_i)]
+\end{align*}
+where $q_{\theta}(\mathbf{Y}|\mathbf{X})$ is the variational distribution and can be parameterized by the downstream model $\theta$.
+
+% A measure of mutual information between variable $\mathbf{X}$ and $\mathbf{Y}$ can be formulated as:
+% \begin{align}
+%     \mathcal{I}(\mathbf{X};\mathbf{Y})=\int_{\mathbf{X}}\int_{\mathbf{Y}}log\frac{P(\mathbf{X},\mathbf{Y})}{P(\mathbf{X})P(\mathbf{Y})} 
+% \end{align}
+% where $P(\mathbf{X})$ and $P(\mathbf{Y})$ are the marginal distributions of $\mathbf{X}$ and $\mathbf{Y}$
+%  respectively, and $P(\mathbf{X},\mathbf{Y})$ denotes the joint distribution of \mathbf{X} and \mathbf{Y}.
+ 
+% The variational contrastive log-ratio upper bound~(vCLUB)~\citep{cheng2020club} of mutual information is defined by:
+% \begin{align}
+%     \mathcal{I}(\mathbf{X};\mathbf{Y})=E_{p(\mathbf{X},\mathbf{Y})}[\log q_{\theta}(\mathbf{Y}|\mathbf{X})]
+%     -E_{p(\mathbf{X})p(\mathbf{Y})}[\log q_{\theta}(\mathbf{Y}|\mathbf{X})]
+% \end{align}
+% where $q_{\theta}(\mathbf{Y}|\mathbf{X})$ is the variational distribution to approximate the ground-truth probability $P(\mathbf{Y}|\mathbf{X})$ and can be parameterized by the downstream model $\theta$.
+
+% With test dataset $\mathcal{D}$, $\mathcal{I}(\mathbf{X};\mathbf{Y})$ has an unbiased estimation as:
+% \begin{align}
+%     \mathcal{\hat{I}}(\mathbf{X};\mathbf{Y})=\frac{1}{N^2}\sum_{i=1}^{N}\sum_{j=1}^{N}[\log q_{\theta}(y_i|x_i)-\log q_{\theta}(y_j|x_i)]
+% \end{align}
+The downstream model is a vanilla 2-layer 1024-unit BLSTM optimized by CTC loss on characters and it takes speech tokens as inputs. Specifically, for each discrete representation, we first establish an embedding matrix, which can be either randomly initialized or derived from the k-means centroid matrix or vector quantization codebooks obtained during the discretization process. We use the embedding matrix to embed the discrete representations and obtain continuous representations, which are then fed into the downstream models. We train the downstream model on LibriSpeech train-clean-100 subset and use dev-clean subset for estimating mutual information. We also calculate the word error rate~(WER) on the test set.
+For downstream model training, we configure the training setup with a batch size of 32, a learning rate of 1e-4, and a total of 200k global steps.
+
+
+% This section explains how to compute mutual information using the performance of downstream tasks.
+% For notation, $\mathbf{X}$ denotes discrete speech representations; $\mathbf{Y}$ denotes one of the three speech attributes: content, timbre, or paralinguistics; the test dataset is denoted as $\mathcal{D} =\{(\mathbf{x}, \mathbf{y})\}; $$H(\mathbf{X})$ denotes the entropy of $\mathbf{X}$; $H(\mathbf{Y})$ denotes the entropy of $\mathbf{Y}$; $H(\mathbf{Y}|\mathbf{X})$ denotes the entropy of $\mathbf{Y}$ conditional on $\mathbf{X}$; $H(\mathbf{X}|\mathbf{Y})$ denotes the entropy of $\mathbf{X}$ conditional on $\mathbf{Y}$; $I(\mathbf{Y};\mathbf{X})$ denotes the mutual information; $N$ denotes the number of samples in the test dataset.
+
+% Because each sample is randomly sampled from test dataset, we get
+% \begin{align}
+%     p(x)&=\frac{1}{N}, \forall x \in D
+% \end{align}
+% We have
+% % \begin{equation}
+% \begin{align}
+% I(\mathbf{X};\mathbf{Y})&=H(\mathbf{Y})-H(\mathbf{Y}|\mathbf{X}) \\
+% H(\mathbf{Y})&=-\sum_{y \in D}p(y)\log p(y) \\
+% H(\mathbf{Y}|\mathbf{X})&=-\sum_{(x,y) \in D}p(x,y)\log p(y|x)\\
+% &=-\sum_{(x,y) \in D}p(y|x)p(x)\log p(y|x)\\
+% &=-\frac{1}{N}\sum_{(x,y) \in D}p(y|x)\log p(y|x)
+% \end{align}
+% % \end{equation}
+
+
+% So
+% \begin{align}
+% I(\mathbf{X};\mathbf{Y})=\frac{1}{N}\sum_{(x,y) \in D}p(y|x)\log p(y|x)-\sum_{y \in D}p(y)\log p(y)
+% \end{align}
+% where for content, $p(y)$ can be calculated from large language model like GPT-3; for timbre and paralinguistics, $p(y)$ can be calculated from dataset statistics. $p(x|y)$ can be calculated from downstream model output.

@@ -1,0 +1,34 @@
+Our training approach includes both a reconstruction task and a semantic distillation task. In the reconstruction task, we employ a GAN objective, optimizing a combination of a reconstruction term, a discriminative loss term, and RVQ commitment loss.  In the semantic distillation task, the training objective involves a semantic distillation loss term. In the following, $\mathbf{x}$ represents an speech signal and $\mathbf{\hat{x}}$ denotes the reconstructed signal by the network.%在下文中我们用x表示音频信号，\hat{x}表示模型输出。
+
+\textbf{Reconstruction Loss} The reconstruction loss comprises a time and a frequency domain loss. For time domain, we minimize the L1 distance between $x$ and $\hat{x}$, i.e. 
+$\mathcal{L}_t=\lVert \mathbf{x}-\mathbf{\hat{x}}\rVert_1.$
+For frequency domain, we linearly combine the L1 and L2 losses over the mel-spectrogram using several time scales. Formally, 
+$
+\mathcal{L}_{f}=\sum_{i\in e}\lVert \mathcal{S}_i(\mathbf{x})-\mathcal{S}_i(\mathbf{\hat{x}})\rVert_1+\lVert \mathcal{S}_i(\mathbf{x})-\mathcal{S}_i(\mathbf{\hat{x}})\rVert_2,
+$
+where $\mathcal{S}_i$ is a 64-bins mel-spectrogram using a normalized STFT with window size of $2^i$ and hop length of
+$2^i/4,e=5,\cdots,11$ is the set of scales.
+
+\textbf{Discriminative Loss}~ We use the same dicriminators as HiFi-Codec~\cite{yang2023hificodec} that consist of three discriminators: A multi-scale STFT-based~(MS-STFT) discriminator; a multi-period discriminator~(MPD) and a multi-scale discriminator~(MSD). Further details of discriminators can be found in Appendix \ref{sec:app:model}. The adversarial loss is used to promote perceptual quality and it is defined as a hinge loss over the logits of the discriminator, averaged over multiple discriminators and over
+time. Let $K$ denote the number of discriminators, the adversarial loss for the generator $\mathcal{L}_{D}$ is constructed as follows, $\mathcal{L}_{g}=\frac{1}{K}\sum_{k=1}^Kmax(1-D_k(\mathbf{\hat{x}}),0).$ For the discriminators $\mathcal{L}_{g}$ is defined as:
+\begin{align*}
+\mathcal{L}_{D}=\frac{1}{K}\sum_{k=1}^Kmax(1-D_k(\mathbf{x}), 0)+max(1+D_k(\mathbf{\hat{x}}),0),
+\end{align*}
+Additionally, a feature matching loss for the generator is computed as follow:
+\begin{align*}
+\mathcal{L}_{feat}=\frac{1}{KL}\sum_{k=1}^K\sum_{l=1}^L
+\frac{\lVert D_k^l(\mathbf{x})-D^l_k(\mathbf{\hat{x}})\rVert_1}{mean(\lVert D_k^l(\mathbf{x})\rVert_1)},
+\end{align*}
+where the mean is computed over all dimensions and $L$ is the number of layers in discriminators.
+
+\textbf{RVQ Commitment Loss}~
+We add a commitment loss $\mathcal{L}_w$ between the pre-quantized value, and its quantized value, without gradient computed for the quantized value. RVQ commitment loss is defined as:
+$
+\mathcal{L}_w=\sum_{i=1}^{N_q}\lVert \mathbf{z}_i - \mathbf{z}_{q_i}\rVert_2^2.
+$, where $\mathbf{z}_i$ and $\mathbf{z}_{q_i}$ denote current residual and nearest entry in the corresponding codebook respectively. 
+
+Generally, the generator is trained to optimize the following loss:$$\mathcal{L}_G=\lambda_t\mathcal{L}_t+\lambda_f\mathcal{L}_f+\lambda_g\mathcal{L}_g+\lambda_{feat}\mathcal{L}_{feat}+\lambda_w\mathcal{L}_w+\lambda_{distill}\mathcal{L}_{distill},$$ where $\lambda_t,\lambda_f,\lambda_g,\lambda_{feat},\lambda_{w}$ and $\lambda_{distill}$ are hyper-parameters used to balance each loss term.
+
+% \textbf{Distillation Loss} Inspired by \citep{chang2022distilhubert}, the training objective of knowledge distillation aims to maximize the cosine similarity between the output of the RVQ's first layer and that of the teacher model. Let $q_1^t$ and $h^t$ respectively denote the output of the first VQ layer and the teacher model, both at time t. The distillation loss term can be written as
+% $$\mathcal{L}_{distll}=\frac{1}{T}\sum_{t=1}^T\log{\sigma(\cos{(Aq_1^t, h^t)})},$$ where $T$ is the number of time steps and $A$ is the projection matrix. $\sigma(\cdot)$ and $\cos{(\cdot, \cdot)}$ respectively denote sigmoid activation and cosine similarity.
+

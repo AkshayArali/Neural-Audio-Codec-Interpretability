@@ -1,0 +1,23 @@
+\textbf{Speech Reconstruction}~
+\input{Tables/reconstruction}
+Table~\ref{tab:speech_reconstruction} summarizes the results of speech reconstruction experiments. The \method achienves lower WER than Encodec, demonstrating its superior ability to preserve content. Additionally, \method attains a comparable VISQOL score but a higher MUSHRA score than EnCodec, which indicates its stronger capability in generating high-quality speech. 
+% We put samples of speech reconstruction in our demo page~\footnote{\url{https://0nutation.github.io/SpeechTokenizer.github.io/}}.
+
+
+\input{Tables/bench_results}
+
+\textbf{Performance on \bench }~
+Table~\ref{tab:bench_results} displays the performance of \method on \bench. 
+Compared with EnCodec-RVQ-1, \method-RVQ-1 achieves higher mutual information between text and lower WER of downstream model. This suggests that \method exhibits a stronger alignment with textual content. Meanwhile, the of resynthesized speech of \method RVQ-1 tokens achieves lower WER and speaker similarity, indicating its capability to retain more content-related information while disregarding timbre characteristics, similar to semantic tokens.
+The resynthesized speech of \method RVQ-1:8 tokens demonstrates low WER and high speaker similarity, illustrating \method's competence in preserving comprehensive speech information, similar to acoustic tokens. 
+Furthermore, the speaker similarity of resynthesized speech of \method RVQ-1 tokens is notably low, whereas that of \method RVQ-1:8 tokens is considerably high. This observation implies that the tokens from subsequent layers compensate for the timbre information that is discarded by the first layer tokens.
+
+
+
+
+\textbf{Zero-shot TTS}~
+As shown in Table~\ref{tab:zstts}, our USLM demonstrates lower WER than VALL-E. This result highlights that \method can contribute to a more precise modeling of content information. Additionally, the USLM demonstrates superior speaker similarity, implying that a decoupled information structure is more conducive to modeling speaker-related information. 
+% We put samples of zero-shot TTS on our demo page~\footnote{\url{https://0nutation.github.io/SpeechTokenizer.github.io/}}.
+
+
+\input{Tables/zstts}

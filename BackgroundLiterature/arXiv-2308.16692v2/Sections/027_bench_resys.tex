@@ -1,0 +1,4 @@
+To evaluate the preservation of speech information in discrete speech representations, we convert speech tokens back to speech and evaluate resynthesized speech by automatic metrics on content and timbre.
+We train a unit-HiFIGAN~\citep{polyak2021speech} on LibriSpeech dataset to convert HuBERT units to waveform. Notably, to avoid interference from additional information, we don't supply any speaker information during training. For Encodec tokens, we used the Encodec decoder to
+directly produce the waveform.
+Content preservation is evaluated by computing the WER through transcribing the resynthesized speech using the Whisper en-medium model~\citep{radford2023robust}. Timbre preservation is evaluated by utilizing WavLM-TDNN~\citep{Chen_2022} to calculate speaker similarity between the synthesized and groundtruth speech. We randomly sample 300 speech samples from LibriSpeech test set for evaluation. 

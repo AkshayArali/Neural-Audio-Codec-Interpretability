@@ -1,0 +1,19 @@
+For notation, $X$ denotes discrete speech representations; $Y$ denotes text; $\mathcal{I}(X;Y)$ denotes the mutual information; test dataset is denoted as $\mathcal{D} =\{(x_i, y_i)\}_{i=1}^{N}$ and $\theta$ denotes the downstream model. 
+A measure of mutual information between variable $X$ and $Y$ can be formulated as:
+\begin{align*}
+    \mathcal{I}(X;Y)=\int_{X}\int_{Y}log\frac{P(X,Y)}{P(X)P(Y)} 
+\end{align*}
+where $P(X)$ and $P(Y)$ are the marginal distributions of $X$ and $Y$
+ respectively, and $P(X,Y)$ denotes the joint distribution of X and Y.
+ 
+The variational contrastive log-ratio upper bound~(vCLUB)~\citep{cheng2020club} of mutual information is defined by:
+\begin{align*}
+    \mathcal{I}(X;Y)=E_{p(X,Y)}[\log q_{\theta}(Y|X)]
+    -E_{p(X)p(Y)}[\log q_{\theta}(Y|X)]
+\end{align*}
+where $q_{\theta}(Y|X)$ is the variational distribution to approximate the ground-truth probability $P(Y|X)$ and can be parameterized by the downstream model $\theta$.
+
+With test dataset $\mathcal{D}$, $\mathcal{I}(X;Y)$ has an unbiased estimation as:
+\begin{align*}
+    \mathcal{\hat{I}}(X;Y)=\frac{1}{N^2}\sum_{i=1}^{N}\sum_{j=1}^{N}[\log q_{\theta}(y_i|x_i)-\log q_{\theta}(y_j|x_i)]
+\end{align*}

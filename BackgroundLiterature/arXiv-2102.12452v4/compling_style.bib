@@ -1,0 +1,980 @@
+@String{ACL01 = "Proceedings of the 39th Annual Conference of the Association for Computational Linguistics (ACL-01)"}
+
+
+
+@inproceedings{ravichander:2021:eacl,
+    title = "Probing the Probing Paradigm: Does Probing Accuracy Entail Task Relevance?",
+    author = "Ravichander, Abhilasha  and
+      Belinkov, Yonatan  and
+      Hovy, Eduard",
+    booktitle = "Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume",
+    month = apr,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.eacl-main.295",
+    pages = "3363--3377",
+    abstract = "Although neural models have achieved impressive results on several NLP benchmarks, little is understood about the mechanisms they use to perform language tasks. Thus, much recent attention has been devoted to analyzing the sentence representations learned by neural encoders, through the lens of {`}probing{'} tasks. However, to what extent was the information encoded in sentence representations, as discovered through a probe, actually used by the model to perform its task? In this work, we examine this probing paradigm through a case study in Natural Language Inference, showing that models can learn to encode linguistic properties even if they are not needed for the task on which the model was trained. We further identify that pretrained word embeddings play a considerable role in encoding these properties rather than the training task itself, highlighting the importance of careful controls when designing probing experiments. Finally, through a set of controlled synthetic tasks, we demonstrate models can encode these properties considerably above chance-level, even when distributed in the data as random noise, calling into question the interpretation of absolute claims on probing tasks.",
+}
+
+
+
+@inproceedings{hewitt-liang-2019-designing,
+    title = "Designing and Interpreting Probes with Control Tasks",
+    author = "Hewitt, John  and
+      Liang, Percy",
+    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D19-1275",
+    doi = "10.18653/v1/D19-1275",
+    pages = "2733--2743",
+    abstract = "Probes, supervised models trained to predict properties (like parts-of-speech) from representations (like ELMo), have achieved high accuracy on a range of linguistic tasks. But does this mean that the representations encode linguistic structure or just that the probe has learned the linguistic task? In this paper, we propose control tasks, which associate word types with random outputs, to complement linguistic tasks. By construction, these tasks can only be learned by the probe itself. So a good probe, (one that reflects the representation), should be selective, achieving high linguistic task accuracy and low control task accuracy. The selectivity of a probe puts linguistic task accuracy in context with the probe{'}s capacity to memorize from word types. We construct control tasks for English part-of-speech tagging and dependency edge prediction, and show that popular probes on ELMo representations are not selective. We also find that dropout, commonly used to control probe complexity, is ineffective for improving selectivity of MLPs, but that other forms of regularization are effective. Finally, we find that while probes on the first layer of ELMo yield slightly better part-of-speech tagging accuracy than the second, probes on the second layer are substantially more selective, which raises the question of which layer better represents parts-of-speech.",
+}
+
+
+@inproceedings{zhang-bowman-2018-language,
+    title = "Language Modeling Teaches You More than Translation Does: Lessons Learned Through Auxiliary Syntactic Task Analysis",
+    author = "Zhang, Kelly  and
+      Bowman, Samuel",
+    booktitle = "Proceedings of the 2018 {EMNLP} Workshop {B}lackbox{NLP}: Analyzing and Interpreting Neural Networks for {NLP}",
+    month = nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W18-5448",
+    doi = "10.18653/v1/W18-5448",
+    pages = "359--361",
+    abstract = "Recently, researchers have found that deep LSTMs trained on tasks like machine translation learn substantial syntactic and semantic information about their input sentences, including part-of-speech. These findings begin to shed light on why pretrained representations, like ELMo and CoVe, are so beneficial for neural language understanding models. We still, though, do not yet have a clear understanding of how the choice of pretraining objective affects the type of linguistic information that models learn. With this in mind, we compare four objectives{---}language modeling, translation, skip-thought, and autoencoding{---}on their ability to induce syntactic and part-of-speech information, holding constant the quantity and genre of the training data, as well as the LSTM architecture.",
+}
+
+@inproceedings{chrupala-etal-2020-analyzing,
+    title = "Analyzing analytical methods: The case of phonology in neural models of spoken language",
+    author = "Chrupa{\l}a, Grzegorz  and
+      Higy, Bertrand  and
+      Alishahi, Afra",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.381",
+    doi = "10.18653/v1/2020.acl-main.381",
+    pages = "4146--4156",
+    abstract = "Given the fast development of analysis techniques for NLP and speech processing systems, few systematic studies have been conducted to compare the strengths and weaknesses of each method. As a step in this direction we study the case of representations of phonology in neural network models of spoken language. We use two commonly applied analytical techniques, diagnostic classifiers and representational similarity analysis, to quantify to what extent neural activation patterns encode phonemes and phoneme sequences. We manipulate two factors that can affect the outcome of analysis. First, we investigate the role of learning by comparing neural activations extracted from trained versus randomly-initialized models. Second, we examine the temporal scope of the activations by probing both local activations corresponding to a few milliseconds of the speech signal, and global activations pooled over the whole utterance. We conclude that reporting analysis results with randomly initialized models is crucial, and that global-scope methods tend to yield more consistent and interpretable results and we recommend their use as a complement to local-scope diagnostic methods.",
+}
+
+@inproceedings{pimentel-etal-2020-information,
+    title = "Information-Theoretic Probing for Linguistic Structure",
+    author = "Pimentel, Tiago  and
+      Valvoda, Josef  and
+      Hall Maudslay, Rowan  and
+      Zmigrod, Ran  and
+      Williams, Adina  and
+      Cotterell, Ryan",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.420",
+    doi = "10.18653/v1/2020.acl-main.420",
+    pages = "4609--4622",
+    abstract = "The success of neural networks on a diverse set of NLP tasks has led researchers to question how much these networks actually {``}know{''} about natural language. Probes are a natural way of assessing this. When probing, a researcher chooses a linguistic task and trains a supervised model to predict annotations in that linguistic task from the network{'}s learned representations. If the probe does well, the researcher may conclude that the representations encode knowledge related to the task. A commonly held belief is that using simpler models as probes is better; the logic is that simpler models will identify linguistic structure, but not learn the task itself. We propose an information-theoretic operationalization of probing as estimating mutual information that contradicts this received wisdom: one should always select the highest performing probe one can, even if it is more complex, since it will result in a tighter estimate, and thus reveal more of the linguistic information inherent in the representation. The experimental portion of our paper focuses on empirically estimating the mutual information between a linguistic property and BERT, comparing these estimates to several baselines. We evaluate on a set of ten typologically diverse languages often underrepresented in NLP research{---}plus English{---}totalling eleven languages. Our implementation is available in https://github.com/rycolab/info-theoretic-probing.",
+}
+
+
+@inproceedings{voita-titov-2020-information,
+    title = "Information-Theoretic Probing with Minimum Description Length",
+    author = "Voita, Elena  and
+      Titov, Ivan",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.14",
+    doi = "10.18653/v1/2020.emnlp-main.14",
+    pages = "183--196",
+    abstract = "To measure how well pretrained representations encode some linguistic property, it is common to use accuracy of a probe, i.e. a classifier trained to predict the property from the representations. Despite widespread adoption of probes, differences in their accuracy fail to adequately reflect differences in representations. For example, they do not substantially favour pretrained representations over randomly initialized ones. Analogously, their accuracy can be similar when probing for genuine linguistic labels and probing for random synthetic tasks. To see reasonable differences in accuracy with respect to these random baselines, previous work had to constrain either the amount of probe training data or its model size. Instead, we propose an alternative to the standard probes, information-theoretic probing with minimum description length (MDL). With MDL probing, training a probe to predict labels is recast as teaching it to effectively transmit the data. Therefore, the measure of interest changes from probe accuracy to the description length of labels given representations. In addition to probe quality, the description length evaluates {``}the amount of effort{''} needed to achieve the quality. This amount of effort characterizes either (i) size of a probing model, or (ii) the amount of data needed to achieve the high quality. We consider two methods for estimating MDL which can be easily implemented on top of the standard probing pipelines: variational coding and online coding. We show that these methods agree in results and are more informative and stable than the standard probes.",
+}
+
+
+@inproceedings{pimentel-etal-2020-pareto,
+    title = "{P}areto Probing: {T}rading Off Accuracy for Complexity",
+    author = "Pimentel, Tiago  and
+      Saphra, Naomi  and
+      Williams, Adina  and
+      Cotterell, Ryan",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.254",
+    doi = "10.18653/v1/2020.emnlp-main.254",
+    pages = "3138--3153",
+    abstract = "The question of how to probe contextual word representations in a way that is principled and useful has seen significant recent attention. In our contribution to this discussion, we argue, first, for a probe metric that reflects the trade-off between probe complexity and performance: the Pareto hypervolume. To measure complexity, we present a number of parametric and non-parametric metrics. Our experiments with such metrics show that probe{'}s performance curves often fail to align with widely accepted rankings between language representations (with, e.g., non-contextual representations outperforming contextual ones). These results lead us to argue, second, that common simplistic probe tasks such as POS labeling and dependency arc labeling, are inadequate to evaluate the properties encoded in contextual word representations. We propose full dependency parsing as an example probe task, and demonstrate it with the Pareto hypervolume. In support of our arguments, the results of this illustrative experiment conform closer to accepted rankings among contextual word representations.",
+}
+
+
+@inproceedings{giulianelli-etal-2018-hood,
+    title = "Under the Hood: Using Diagnostic Classifiers to Investigate and Improve how Language Models Track Agreement Information",
+    author = "Giulianelli, Mario  and
+      Harding, Jack  and
+      Mohnert, Florian  and
+      Hupkes, Dieuwke  and
+      Zuidema, Willem",
+    booktitle = "Proceedings of the 2018 {EMNLP} Workshop {B}lackbox{NLP}: Analyzing and Interpreting Neural Networks for {NLP}",
+    month = nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W18-5426",
+    doi = "10.18653/v1/W18-5426",
+    pages = "240--248",
+    abstract = "How do neural language models keep track of number agreement between subject and verb? We show that {`}diagnostic classifiers{'}, trained to predict number from the internal states of a language model, provide a detailed understanding of how, when, and where this information is represented. Moreover, they give us insight into when and where number information is corrupted in cases where the language model ends up making agreement errors. To demonstrate the causal role played by the representations we find, we then use agreement information to influence the course of the LSTM during the processing of difficult sentences. Results from such an intervention reveal a large increase in the language model{'}s accuracy. Together, these results show that diagnostic classifiers give us an unrivalled detailed look into the representation of linguistic information in neural models, and demonstrate that this knowledge can be used to improve their performance.",
+}
+
+
+
+@article{elazar2020amnesic,
+	author = {Yanai Elazar and Shauli Ravfogel and Alon Jacovi and Yoav Goldberg},
+	title = {Amnesic Probing: Behavioral Explanation With Amnesic Counterfactuals},
+	journal = {Transactions of the Association for Computational Linguistics},
+	volume = {9},
+	number = {0},
+	year = {2021},
+	keywords = {},
+	abstract = {A growing body of work makes use of probing in order to investigate the working of neural models, often considered black boxes. Recently, an ongoing debate emerged surrounding the limitations of the probing paradigm. In this work, we point out the inability to infer behavioral conclusions from probing results, and offer an alternative method which focuses on how the information is being used, rather than on what information is encoded. Our method, Amnesic Probing, follows the intuition that the utility of a property for a given task can be assessed by measuring the influence of a causal intervention which removes it from the representation. Equipped with this new analysis tool, we can ask questions that were not possible before, e.g. is part-of-speech information important for word prediction?  We perform a series of analyses on BERT to answer these types of questions. Our findings demonstrate that conventional probing performance is not correlated to task importance, and we call for increased scrutiny of claims that draw behavioral or causal conclusions from probing results.},
+	issn = {2307-387X},	pages = {160--175},	url = {https://transacl.org/index.php/tacl/article/view/2423}
+}
+
+
+
+@inproceedings{bau2018identifying,
+title={Identifying and Controlling Important Neurons in Neural Machine Translation},
+author={Anthony Bau and Yonatan Belinkov and Hassan Sajjad and Nadir Durrani and Fahim Dalvi and James Glass},
+booktitle={International Conference on Learning Representations},
+year={2019},
+url={https://openreview.net/forum?id=H1z-PsR5KX},
+}
+
+
+@inproceedings{vig:2020:neurips,
+ author = {Vig, Jesse and Gehrmann, Sebastian and Belinkov, Yonatan and Qian, Sharon and Nevo, Daniel and Singer, Yaron and Shieber, Stuart},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {12388--12401},
+ publisher = {Curran Associates, Inc.},
+ title = {Investigating Gender Bias in Language Models Using Causal Mediation Analysis},
+ url = {https://proceedings.neurips.cc/paper/2020/file/92650b2e92217715fe312e6fa7b90d82-Paper.pdf},
+ volume = {33},
+ year = {2020}
+}
+
+
+   
+   
+
+@article{feder2020causalm,
+    author = {Feder, Amir and Oved, Nadav and Shalit, Uri and Reichart, Roi},
+    title = "{CausaLM: Causal Model Explanation Through Counterfactual Language Models}",
+    journal = {Computational Linguistics},
+    volume = {47},
+    number = {2},
+    pages = {333-386},
+    year = {2021},
+    month = {07},
+    abstract = "{Understanding predictions made by deep neural networks is notoriously difficult, but also crucial to their dissemination. As all machine learning–based methods, they are as good as their training data, and can also capture unwanted biases. While there are tools that can help understand whether such biases exist, they do not distinguish between correlation and causation, and might be ill-suited for text-based models and for reasoning about high-level language concepts. A key problem of estimating the causal effect of a concept of interest on a given model is that this estimation requires the generation of counterfactual examples, which is challenging with existing generation technology. To bridge that gap, we propose CausaLM, a framework for producing causal model explanations using counterfactual language representation models. Our approach is based on fine-tuning of deep contextualized embedding models with auxiliary adversarial tasks derived from the causal graph of the problem. Concretely, we show that by carefully choosing auxiliary adversarial pre-training tasks, language representation models such as BERT can effectively learn a counterfactual representation for a given concept of interest, and be used to estimate its true causal effect on model performance. A byproduct of our method is a language representation model that is unaffected by the tested concept, which can be useful in mitigating unwanted bias ingrained in the data.1}",
+    issn = {0891-2017},
+    doi = {10.1162/coli_a_00404},
+    url = {https://doi.org/10.1162/coli\_a\_00404},
+    eprint = {https://direct.mit.edu/coli/article-pdf/47/2/333/1938107/coli\_a\_00404.pdf},
+}
+
+
+
+
+
+
+
+@inproceedings{liu-etal-2019-linguistic,
+    title = "Linguistic Knowledge and Transferability of Contextual Representations",
+    author = "Liu, Nelson F.  and
+      Gardner, Matt  and
+      Belinkov, Yonatan  and
+      Peters, Matthew E.  and
+      Smith, Noah A.",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    month = jun,
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/N19-1112",
+    doi = "10.18653/v1/N19-1112",
+    pages = "1073--1094",
+    abstract = "Contextual word representations derived from large-scale neural language models are successful across a diverse set of NLP tasks, suggesting that they encode useful and transferable features of language. To shed light on the linguistic knowledge they capture, we study the representations produced by several recent pretrained contextualizers (variants of ELMo, the OpenAI transformer language model, and BERT) with a suite of sixteen diverse probing tasks. We find that linear models trained on top of frozen contextual representations are competitive with state-of-the-art task-specific models in many cases, but fail on tasks requiring fine-grained linguistic knowledge (e.g., conjunct identification). To investigate the transferability of contextual word representations, we quantify differences in the transferability of individual layers within contextualizers, especially between recurrent neural networks (RNNs) and transformers. For instance, higher layers of RNNs are more task-specific, while transformer layers do not exhibit the same monotonic trend. In addition, to better understand what makes contextual word representations transferable, we compare language model pretraining with eleven supervised pretraining tasks. For any given task, pretraining on a closely related task yields better performance than language model pretraining (which is better on average) when the pretraining dataset is fixed. However, language model pretraining on more data gives the best results.",
+}
+
+
+@inproceedings{kohn-2015-whats,
+    title = "What{'}s in an Embedding? Analyzing Word Embeddings through Multilingual Evaluation",
+    author = {K{\"o}hn, Arne},
+    booktitle = "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+    month = sep,
+    year = "2015",
+    address = "Lisbon, Portugal",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D15-1246",
+    doi = "10.18653/v1/D15-1246",
+    pages = "2067--2073",
+}
+
+
+@inproceedings{gupta-etal-2015-distributional,
+    title = "Distributional vectors encode referential attributes",
+    author = "Gupta, Abhijeet  and
+      Boleda, Gemma  and
+      Baroni, Marco  and
+      Pad{\'o}, Sebastian",
+    booktitle = "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing",
+    month = sep,
+    year = "2015",
+    address = "Lisbon, Portugal",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D15-1002",
+    doi = "10.18653/v1/D15-1002",
+    pages = "12--21",
+}
+
+
+@article{alain2016understanding,
+  title={Understanding intermediate layers using linear classifier probes},
+  author={Alain, Guillaume and Bengio, Yoshua},
+  journal={arXiv preprint arXiv:1610.01644v3},
+  year={2016}
+}
+
+
+@inproceedings{shi-etal-2016-string,
+    title = "Does String-Based Neural {MT} Learn Source Syntax?",
+    author = "Shi, Xing  and
+      Padhi, Inkit  and
+      Knight, Kevin",
+    booktitle = "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2016",
+    address = "Austin, Texas",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D16-1159",
+    doi = "10.18653/v1/D16-1159",
+    pages = "1526--1534",
+}
+
+
+@inproceedings{ettinger-etal-2016-probing,
+    title = "Probing for semantic evidence of composition by means of simple classification tasks",
+    author = "Ettinger, Allyson  and
+      Elgohary, Ahmed  and
+      Resnik, Philip",
+    booktitle = "Proceedings of the 1st Workshop on Evaluating Vector-Space Representations for {NLP}",
+    month = aug,
+    year = "2016",
+    address = "Berlin, Germany",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W16-2524",
+    doi = "10.18653/v1/W16-2524",
+    pages = "134--139",
+}
+
+
+@inproceedings{conneau-etal-2018-cram,
+    title = "What you can cram into a single {\$}{\&}!{\#}* vector: Probing sentence embeddings for linguistic properties",
+    author = {Conneau, Alexis  and
+      Kruszewski, German  and
+      Lample, Guillaume  and
+      Barrault, Lo{\"\i}c  and
+      Baroni, Marco},
+    booktitle = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2018",
+    address = "Melbourne, Australia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P18-1198",
+    doi = "10.18653/v1/P18-1198",
+    pages = "2126--2136",
+    abstract = "Although much effort has recently been devoted to training high-quality sentence embeddings, we still have a poor understanding of what they are capturing. {``}Downstream{''} tasks, often based on sentence classification, are commonly used to evaluate the quality of sentence representations. The complexity of the tasks makes it however difficult to infer what kind of information is present in the representations. We introduce here 10 probing tasks designed to capture simple linguistic features of sentences, and we use them to study embeddings generated by three different encoders trained in eight distinct ways, uncovering intriguing properties of both encoders and training methods.",
+}
+
+
+
+@InProceedings{adi:2017:ICLR,
+  title={Fine-grained Analysis of Sentence Embeddings Using Auxiliary Prediction Tasks},
+  author={Adi, Yossi and Kermany, Einat and Belinkov, Yonatan and Lavi, Ofer and Goldberg, Yoav},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2017},
+  month={April},
+  abstract = {There is a lot of research interest in encoding variable length sentences into fixed length vectors, in a way that preserves the sentence meanings. Two common methods include representations based on averaging word vectors, and representations based on the hidden states of recurrent neural networks such as LSTMs. The sentence vectors are used as features for subsequent machine learning tasks or for pre-training in the context of deep learning. However, not much is known about the properties that are encoded in these sentence representations and about the language information they capture.
+We propose a framework that facilitates better understanding of the encoded representations. We define prediction tasks around isolated aspects of sentence structure (namely sentence length, word content, and word order), and score representations by the ability to train a classifier to solve each prediction task when using the representation as input. We demonstrate the potential contribution of the approach by analyzing different sentence representation mechanisms. The analysis sheds light on the relative strengths of different sentence embedding methods with respect to these low level prediction tasks, and on the effect of the encoded vector’s dimensionality on the resulting representations.},
+}
+
+
+@article{hupkes2018visualisation,
+  title={Visualisation and 'diagnostic classifiers' reveal how recurrent and recursive neural networks process hierarchical structure},
+  author={Hupkes, Dieuwke and Veldhoen, Sara and Zuidema, Willem},
+  journal={Journal of Artificial Intelligence Research},
+  volume={61},
+  pages={907--926},
+  year={2018}
+}
+
+
+@inproceedings{belinkov-etal-2017-neural,
+    title = "What do Neural Machine Translation Models Learn about Morphology?",
+    author = "Belinkov, Yonatan  and
+      Durrani, Nadir  and
+      Dalvi, Fahim  and
+      Sajjad, Hassan  and
+      Glass, James",
+    booktitle = "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2017",
+    address = "Vancouver, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P17-1080",
+    doi = "10.18653/v1/P17-1080",
+    pages = "861--872",
+    abstract = "Neural machine translation (MT) models obtain state-of-the-art performance while maintaining a simple, end-to-end architecture. However, little is known about what these models learn about source and target languages during the training process. In this work, we analyze the representations learned by neural MT models at various levels of granularity and empirically evaluate the quality of the representations for learning morphology through extrinsic part-of-speech and morphological tagging tasks. We conduct a thorough investigation along several parameters: word-based vs. character-based representations, depth of the encoding layer, the identity of the target language, and encoder vs. decoder representations. Our data-driven, quantitative evaluation sheds light on important aspects in the neural MT system and its ability to capture word structure.",
+}
+
+
+@article{belinkov-glass-2019-analysis,
+    title = "Analysis Methods in Neural Language Processing: A Survey",
+    author = "Belinkov, Yonatan  and
+      Glass, James",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "7",
+    month = mar,
+    year = "2019",
+    url = "https://www.aclweb.org/anthology/Q19-1004",
+    doi = "10.1162/tacl_a_00254",
+    pages = "49--72",
+    abstract = "The field of natural language processing has seen impressive progress in recent years, with neural network models replacing many of the traditional systems. A plethora of new models have been proposed, many of which are thought to be opaque compared to their feature-rich counterparts. This has led researchers to analyze, interpret, and evaluate neural networks in novel and more fine-grained ways. In this survey paper, we review analysis methods in neural language processing, categorize them according to prominent research trends, highlight existing limitations, and point to potential directions for future work.",
+}
+
+
+@inproceedings{zhu-rudzicz-2020-information,
+    title = "An information theoretic view on selecting linguistic probes",
+    author = "Zhu, Zining  and
+      Rudzicz, Frank",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.744",
+    doi = "10.18653/v1/2020.emnlp-main.744",
+    pages = "9251--9262",
+    abstract = "There is increasing interest in assessing the linguistic knowledge encoded in neural representations. A popular approach is to attach a diagnostic classifier {--} or {''}probe{''} {--} to perform supervised classification from internal representations. However, how to select a good probe is in debate. Hewitt and Liang (2019) showed that a high performance on diagnostic classification itself is insufficient, because it can be attributed to either {''}the representation being rich in knowledge{''}, or {''}the probe learning the task{''}, which Pimentel et al. (2020) challenged. We show this dichotomy is valid information-theoretically. In addition, we find that the {''}good probe{''} criteria proposed by the two papers, *selectivity* (Hewitt and Liang, 2019) and *information gain* (Pimentel et al., 2020), are equivalent {--} the errors of their approaches are identical (modulo irrelevant terms). Empirically, these two selection criteria lead to results that highly agree with each other.",
+}
+
+@inproceedings{belinkov-etal-2020-interpretability,
+    title = "Interpretability and Analysis in Neural {NLP}",
+    author = "Belinkov, Yonatan  and
+      Gehrmann, Sebastian  and
+      Pavlick, Ellie",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics: Tutorial Abstracts",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-tutorials.1",
+    doi = "10.18653/v1/2020.acl-tutorials.1",
+    pages = "1--5",
+    abstract = "While deep learning has transformed the natural language processing (NLP) field and impacted the larger computational linguistics community, the rise of neural networks is stained by their opaque nature: It is challenging to interpret the inner workings of neural network models, and explicate their behavior. Therefore, in the last few years, an increasingly large body of work has been devoted to the analysis and interpretation of neural network models in NLP. This body of work is so far lacking a common framework and methodology. Moreover, approaching the analysis of modern neural networks can be difficult for newcomers to the field. This tutorial aims to fill this gap and introduce the nascent field of interpretability and analysis of neural networks in NLP. The tutorial will cover the main lines of analysis work, such as structural analyses using probing classifiers, behavioral studies and test suites, and interactive visualizations. We will highlight not only the most commonly applied analysis methods, but also the specific limitations and shortcomings of current approaches, in order to inform participants where to focus future efforts.",
+}
+
+
+@inproceedings{wallace-etal-2020-interpreting,
+    title = "Interpreting Predictions of {NLP} Models",
+    author = "Wallace, Eric  and
+      Gardner, Matt  and
+      Singh, Sameer",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: Tutorial Abstracts",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-tutorials.3",
+    doi = "10.18653/v1/2020.emnlp-tutorials.3",
+    pages = "20--23",
+    abstract = "Although neural NLP models are highly expressive and empirically successful, they also systematically fail in counterintuitive ways and are opaque in their decision-making process. This tutorial will provide a background on interpretation techniques, i.e., methods for explaining the predictions of NLP models. We will first situate example-specific interpretations in the context of other ways to understand models (e.g., probing, dataset analyses). Next, we will present a thorough study of example-specific interpretations, including saliency maps, input perturbations (e.g., LIME, input reduction), adversarial attacks, and influence functions. Alongside these descriptions, we will walk through source code that creates and visualizes interpretations for a diverse set of NLP tasks. Finally, we will discuss open problems in the field, e.g., evaluating, extending, and improving interpretation methods.",
+}
+
+
+@inproceedings{danilevsky-etal-2020-survey,
+    title = "A Survey of the State of Explainable {AI} for Natural Language Processing",
+    author = "Danilevsky, Marina  and
+      Qian, Kun  and
+      Aharonov, Ranit  and
+      Katsis, Yannis  and
+      Kawas, Ban  and
+      Sen, Prithviraj",
+    booktitle = "Proceedings of the 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing",
+    month = dec,
+    year = "2020",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.aacl-main.46",
+    pages = "447--459",
+    abstract = "Recent years have seen important advances in the quality of state-of-the-art models, but this has come at the expense of models becoming less interpretable. This survey presents an overview of the current state of Explainable AI (XAI), considered within the domain of Natural Language Processing (NLP). We discuss the main categorization of explanations, as well as the various ways explanations can be arrived at and visualized. We detail the operations and explainability techniques currently available for generating explanations for NLP model predictions, to serve as a resource for model developers in the community. Finally, we point out the current gaps and encourage directions for future work in this important research area.",
+}
+
+
+
+@phdthesis{belinkov:2018:phdthesis,
+  title		= {On Internal Language Representations in Deep Learning: An Analysis of Machine Translation and Speech Recognition},
+  author	= {Yonatan Belinkov},
+  school	= {Massachusetts Institute of Technology},
+  year		= {2018},
+  month		= {May},
+}
+
+
+
+@inproceedings{belinkov-etal-2017-evaluating,
+    title = "Evaluating Layers of Representation in Neural Machine Translation on Part-of-Speech and Semantic Tagging Tasks",
+    author = "Belinkov, Yonatan  and
+      M{\`a}rquez, Llu{\'\i}s  and
+      Sajjad, Hassan  and
+      Durrani, Nadir  and
+      Dalvi, Fahim  and
+      Glass, James",
+    booktitle = "Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = nov,
+    year = "2017",
+    address = "Taipei, Taiwan",
+    publisher = "Asian Federation of Natural Language Processing",
+    url = "https://www.aclweb.org/anthology/I17-1001",
+    pages = "1--10",
+    abstract = "While neural machine translation (NMT) models provide improved translation quality in an elegant framework, it is less clear what they learn about language. Recent work has started evaluating the quality of vector representations learned by NMT models on morphological and syntactic tasks. In this paper, we investigate the representations learned at different layers of NMT encoders. We train NMT systems on parallel data and use the models to extract features for training a classifier on two tasks: part-of-speech and semantic tagging. We then measure the performance of the classifier as a proxy to the quality of the original NMT model for the given task. Our quantitative analysis yields interesting insights regarding representation learning in NMT models. For instance, we find that higher layers are better at learning semantics while lower layers tend to be better for part-of-speech tagging. We also observe little effect of the target language on source-side representations, especially in higher quality models.",
+}
+
+@article{VanmassenhoveDuWay2017, title={Investigating `Aspect' in {NMT} and {SMT}: Translating the English Simple Past and Present Perfect}, volume={7}, url={https://clinjournal.org/clinj/article/view/73}, journal={Computational Linguistics in the Netherlands Journal}, author={Vanmassenhove, Eva and Du, Jinhua and Way, Andy}, year={2017}, month={Dec.}, pages={109-128} }
+
+
+@inproceedings{lakretz-etal-2019-emergence,
+    title = "The emergence of number and syntax units in {LSTM} language models",
+    author = "Lakretz, Yair  and
+      Kruszewski, German  and
+      Desbordes, Theo  and
+      Hupkes, Dieuwke  and
+      Dehaene, Stanislas  and
+      Baroni, Marco",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    month = jun,
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/N19-1002",
+    doi = "10.18653/v1/N19-1002",
+    pages = "11--20",
+    abstract = "Recent work has shown that LSTMs trained on a generic language modeling objective capture syntax-sensitive generalizations such as long-distance number agreement. We have however no mechanistic understanding of how they accomplish this remarkable feat. Some have conjectured it depends on heuristics that do not truly take hierarchical structure into account. We present here a detailed study of the inner mechanics of number tracking in LSTMs at the single neuron level. We discover that long-distance number information is largely managed by two {``}number units{''}. Importantly, the behaviour of these units is partially controlled by other units independently shown to track syntactic structure. We conclude that LSTMs are, to some extent, implementing genuinely syntactic processing mechanisms, paving the way to a more general understanding of grammatical encoding in LSTMs.",
+}
+
+
+@inproceedings{10.5555/2074022.2074073,
+author = {Pearl, Judea},
+title = {Direct and Indirect Effects},
+year = {2001},
+isbn = {1558608001},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The direct effect of one event on another can be defined and measured by holding constant all intermediate variables between the two. Indirect effects present conceptual and practical difficulties (in nonlinear models), because they cannot be isolated by holding certain variables constant. This paper presents a new way of defining the effect transmitted through a restricted set of paths, without controlling variables on the remaining paths. This permits the assessment of a more natural type of direct and indirect effects, one that is applicable in both linear and nonlinear models and that has broader policy-related interpretations. The paper establishes conditions under which such assessments can be estimated consistently from experimental and nonexperimental data, and thus extends path-analytic techniques to nonlinear and nonparametric models.},
+booktitle = {Proceedings of the Seventeenth Conference on Uncertainty in Artificial Intelligence},
+pages = {411–420},
+numpages = {10},
+location = {Seattle, Washington},
+series = {UAI'01}
+}
+
+
+@inproceedings{hewitt-manning-2019-structural,
+    title = "{A} Structural Probe for Finding Syntax in Word Representations",
+    author = "Hewitt, John  and
+      Manning, Christopher D.",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    month = jun,
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/N19-1419",
+    doi = "10.18653/v1/N19-1419",
+    pages = "4129--4138",
+    abstract = "Recent work has improved our ability to detect linguistic knowledge in word representations. However, current methods for detecting syntactic knowledge do not test whether syntax trees are represented in their entirety. In this work, we propose a structural probe, which evaluates whether syntax trees are embedded in a linear transformation of a neural network{'}s word representation space. The probe identifies a linear transformation under which squared L2 distance encodes the distance between words in the parse tree, and one in which squared L2 norm encodes depth in the parse tree. Using our probe, we show that such transformations exist for both ELMo and BERT but not in baselines, providing evidence that entire syntax trees are embedded implicitly in deep models{'} vector geometry.",
+}
+
+
+@inproceedings{hall-maudslay-etal-2020-tale,
+    title = "A Tale of a Probe and a Parser",
+    author = "Hall Maudslay, Rowan  and
+      Valvoda, Josef  and
+      Pimentel, Tiago  and
+      Williams, Adina  and
+      Cotterell, Ryan",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.659",
+    doi = "10.18653/v1/2020.acl-main.659",
+    pages = "7389--7395",
+    abstract = "Measuring what linguistic information is encoded in neural models of language has become popular in NLP. Researchers approach this enterprise by training {``}probes{''}{---}supervised models designed to extract linguistic structure from another model{'}s output. One such probe is the structural probe (Hewitt and Manning, 2019), designed to quantify the extent to which syntactic information is encoded in contextualised word representations. The structural probe has a novel design, unattested in the parsing literature, the precise benefit of which is not immediately obvious. To explore whether syntactic probes would do better to make use of existing techniques, we compare the structural probe to a more traditional parser with an identical lightweight parameterisation. The parser outperforms structural probe on UUAS in seven of nine analysed languages, often by a substantial amount (e.g. by 11.1 points in English). Under a second less common metric, however, there is the opposite trend{---}the structural probe outperforms the parser. This begs the question: which metric should we prefer?",
+}
+
+
+
+
+@inproceedings{michael-etal-2020-asking,
+    title = "Asking without Telling: Exploring Latent Ontologies in Contextual Representations",
+    author = "Michael, Julian  and
+      Botha, Jan A.  and
+      Tenney, Ian",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.552",
+    doi = "10.18653/v1/2020.emnlp-main.552",
+    pages = "6792--6812",
+    abstract = "The success of pretrained contextual encoders, such as ELMo and BERT, has brought a great deal of interest in what these models learn: do they, without explicit supervision, learn to encode meaningful notions of linguistic structure? If so, how is this structure encoded? To investigate this, we introduce latent subclass learning (LSL): a modification to classifier-based probing that induces a latent categorization (or ontology) of the probe{'}s inputs. Without access to fine-grained gold labels, LSL extracts emergent structure from input representations in an interpretable and quantifiable form. In experiments, we find strong evidence of familiar categories, such as a notion of personhood in ELMo, as well as novel ontological distinctions, such as a preference for fine-grained semantic roles on core arguments. Our results provide unique new evidence of emergent structure in pretrained encoders, including departures from existing annotations which are inaccessible to earlier methods.",
+}
+
+
+
+@article{belinkov-etal-2020-linguistic,
+    title = "On the Linguistic Representational Power of Neural Machine Translation Models",
+    author = "Belinkov, Yonatan  and
+      Durrani, Nadir  and
+      Dalvi, Fahim  and
+      Sajjad, Hassan  and
+      Glass, James",
+    journal = "Computational Linguistics",
+    volume = "46",
+    number = "1",
+    month = mar,
+    year = "2020",
+    url = "https://www.aclweb.org/anthology/2020.cl-1.1",
+    doi = "10.1162/coli_a_00367",
+    pages = "1--52",
+    abstract = "Despite the recent success of deep neural networks in natural language processing and other spheres of artificial intelligence, their interpretability remains a challenge. We analyze the representations learned by neural machine translation (NMT) models at various levels of granularity and evaluate their quality through relevant extrinsic properties. In particular, we seek answers to the following questions: (i) How accurately is word structure captured within the learned representations, which is an important aspect in translating morphologically rich languages? (ii) Do the representations capture long-range dependencies, and effectively handle syntactically divergent languages? (iii) Do the representations capture lexical semantics? We conduct a thorough investigation along several parameters: (i) Which layers in the architecture capture each of these linguistic phenomena; (ii) How does the choice of translation unit (word, character, or subword unit) impact the linguistic properties captured by the underlying representations? (iii) Do the encoder and decoder learn differently and independently? (iv) Do the representations learned by multilingual NMT models capture the same amount of linguistic information as their bilingual counterparts? Our data-driven, quantitative evaluation illuminates important aspects in NMT models and their ability to capture various linguistic phenomena. We show that deep NMT models trained in an end-to-end fashion, without being provided any direct supervision during the training process, learn a non-trivial amount of linguistic information. Notable findings include the following observations: (i) Word morphology and part-of-speech information are captured at the lower layers of the model; (ii) In contrast, lexical semantics or non-local syntactic and semantic dependencies are better represented at the higher layers of the model; (iii) Representations learned using characters are more informed about word-morphology compared to those learned using subword units; and (iv) Representations learned by multilingual models are richer compared to bilingual models.",
+}
+
+
+
+
+@inproceedings{cao-etal-2020-deformer,
+    title = "{D}e{F}ormer: Decomposing Pre-trained Transformers for Faster Question Answering",
+    author = "Cao, Qingqing  and
+      Trivedi, Harsh  and
+      Balasubramanian, Aruna  and
+      Balasubramanian, Niranjan",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.411",
+    doi = "10.18653/v1/2020.acl-main.411",
+    pages = "4487--4497",
+    abstract = "Transformer-based QA models use input-wide self-attention {--} i.e. across both the question and the input passage {--} at all layers, causing them to be slow and memory-intensive. It turns out that we can get by without input-wide self-attention at all layers, especially in the lower layers. We introduce DeFormer, a decomposed transformer, which substitutes the full self-attention with question-wide and passage-wide self-attentions in the lower layers. This allows for question-independent processing of the input text representations, which in turn enables pre-computing passage representations reducing runtime compute drastically. Furthermore, because DeFormer is largely similar to the original model, we can initialize DeFormer with the pre-training weights of a standard transformer, and directly fine-tune on the target QA dataset. We show DeFormer versions of BERT and XLNet can be used to speed up QA by over 4.3x and with simple distillation-based losses they incur only a 1{\%} drop in accuracy. We open source the code at https://github.com/StonyBrookNLP/deformer.",
+}
+
+
+@inproceedings{dalvi-etal-2020-analyzing,
+    title = "Analyzing Redundancy in Pretrained Transformer Models",
+    author = "Dalvi, Fahim  and
+      Sajjad, Hassan  and
+      Durrani, Nadir  and
+      Belinkov, Yonatan",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.398",
+    doi = "10.18653/v1/2020.emnlp-main.398",
+    pages = "4908--4926",
+    abstract = "Transformer-based deep NLP models are trained using hundreds of millions of parameters, limiting their applicability in computationally constrained environments. In this paper, we study the cause of these limitations by defining a notion of Redundancy, which we categorize into two classes: General Redundancy and Task-specific Redundancy. We dissect two popular pretrained models, BERT and XLNet, studying how much redundancy they exhibit at a representation-level and at a more fine-grained neuron-level. Our analysis reveals interesting insights, such as i) 85{\%} of the neurons across the network are redundant and ii) at least 92{\%} of them can be removed when optimizing towards a downstream task. Based on our analysis, we present an efficient feature-based transfer learning procedure, which maintains 97{\%} performance while using at-most 10{\%} of the original neurons.",
+}
+
+
+@article{krishna2018hierarchical,
+  title={Hierarchical Multitask Learning for {CTC}-based Speech Recognition},
+  author={Krishna, Kalpesh and Toshniwal, Shubham and Livescu, Karen},
+  journal={arXiv preprint arXiv:1807.06234},
+  year={2019}
+}
+
+
+@inproceedings{NIPS2017_b069b341,
+ author = {Belinkov, Yonatan and Glass, James},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {I. Guyon and U. V. Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+ pages = {2441--2451},
+ publisher = {Curran Associates, Inc.},
+ title = {Analyzing Hidden Representations in End-to-End Automatic Speech Recognition Systems},
+ url = {https://proceedings.neurips.cc/paper/2017/file/b069b3415151fa7217e870017374de7c-Paper.pdf},
+ volume = {30},
+ year = {2017}
+}
+
+
+
+@inproceedings{clark-etal-2019-bert,
+    title = "What Does {BERT} Look at? An Analysis of {BERT}{'}s Attention",
+    author = "Clark, Kevin  and
+      Khandelwal, Urvashi  and
+      Levy, Omer  and
+      Manning, Christopher D.",
+    booktitle = "Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP",
+    month = aug,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W19-4828",
+    doi = "10.18653/v1/W19-4828",
+    pages = "276--286",
+    abstract = "Large pre-trained neural networks such as BERT have had great recent success in NLP, motivating a growing body of research investigating what aspects of language they are able to learn from unlabeled data. Most recent analysis has focused on model outputs (e.g., language model surprisal) or internal vector representations (e.g., probing classifiers). Complementary to these works, we propose methods for analyzing the attention mechanisms of pre-trained models and apply them to BERT. BERT{'}s attention heads exhibit patterns such as attending to delimiter tokens, specific positional offsets, or broadly attending over the whole sentence, with heads in the same layer often exhibiting similar behaviors. We further show that certain attention heads correspond well to linguistic notions of syntax and coreference. For example, we find heads that attend to the direct objects of verbs, determiners of nouns, objects of prepositions, and coreferent mentions with remarkably high accuracy. Lastly, we propose an attention-based probing classifier and use it to further demonstrate that substantial syntactic information is captured in BERT{'}s attention.",
+}
+
+
+@inproceedings{wu-etal-2020-perturbed,
+    title = "Perturbed Masking: Parameter-free Probing for Analyzing and Interpreting {BERT}",
+    author = "Wu, Zhiyong  and
+      Chen, Yun  and
+      Kao, Ben  and
+      Liu, Qun",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.383",
+    doi = "10.18653/v1/2020.acl-main.383",
+    pages = "4166--4176",
+    abstract = "By introducing a small set of additional parameters, a \textit{probe} learns to solve specific linguistic tasks (e.g., dependency parsing) in a supervised manner using feature representations (e.g., contextualized embeddings). The effectiveness of such \textit{probing} tasks is taken as evidence that the pre-trained model encodes linguistic knowledge. However, this approach of evaluating a language model is undermined by the uncertainty of the amount of knowledge that is learned by the probe itself. Complementary to those works, we propose a parameter-free probing technique for analyzing pre-trained language models (e.g., BERT). Our method does not require direct supervision from the probing tasks, nor do we introduce additional parameters to the probing process. Our experiments on BERT show that syntactic trees recovered from BERT using our method are significantly better than linguistically-uninformed baselines. We further feed the empirically induced dependency structures into a downstream sentiment classification task and find its improvement compatible with or even superior to a human-designed dependency schema.",
+}
+
+
+@article{10030090917,
+author="CHU, Y.",
+title="On the shortest arborescence of a directed graph",
+journal="Science Sinica",
+ISSN="",
+publisher="",
+year="1965",
+month="",
+volume="14",
+number="",
+pages="1396-1400",
+URL="https://ci.nii.ac.jp/naid/10030090917/en/",
+DOI="",
+}
+
+@article{edmonds1967optimum,
+  title={Optimum branchings},
+  author={Edmonds, Jack},
+  journal={Journal of Research of the national Bureau of Standards B},
+  volume={71},
+  number={4},
+  pages={233--240},
+  year={1967}
+}
+
+
+@inproceedings{lepori-mccoy-2020-picking,
+    title = "Picking {BERT}{'}s Brain: Probing for Linguistic Dependencies in Contextualized Embeddings Using Representational Similarity Analysis",
+    author = "Lepori, Michael  and
+      McCoy, R. Thomas",
+    booktitle = "Proceedings of the 28th International Conference on Computational Linguistics",
+    month = dec,
+    year = "2020",
+    address = "Barcelona, Spain (Online)",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.coling-main.325",
+    doi = "10.18653/v1/2020.coling-main.325",
+    pages = "3637--3651",
+    abstract = "As the name implies, contextualized representations of language are typically motivated by their ability to encode context. Which aspects of context are captured by such representations? We introduce an approach to address this question using Representational Similarity Analysis (RSA). As case studies, we investigate the degree to which a verb embedding encodes the verb{'}s subject, a pronoun embedding encodes the pronoun{'}s antecedent, and a full-sentence representation encodes the sentence{'}s head word (as determined by a dependency parse). In all cases, we show that BERT{'}s contextualized embeddings reflect the linguistic dependency being studied, and that BERT encodes these dependencies to a greater degree than it encodes less linguistically-salient controls. These results demonstrate the ability of our approach to adjudicate between hypotheses about which aspects of context are encoded in representations of language.",
+}
+
+
+@inproceedings{chrupala-alishahi-2019-correlating,
+    title = "Correlating Neural and Symbolic Representations of Language",
+    author = "Chrupa{\l}a, Grzegorz  and
+      Alishahi, Afra",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P19-1283",
+    doi = "10.18653/v1/P19-1283",
+    pages = "2952--2962",
+    abstract = "Analysis methods which enable us to better understand the representations and functioning of neural models of language are increasingly needed as deep learning becomes the dominant approach in NLP. Here we present two methods based on Representational Similarity Analysis (RSA) and Tree Kernels (TK) which allow us to directly quantify how strongly the information encoded in neural activation patterns corresponds to information represented by symbolic structures such as syntax trees. We first validate our methods on the case of a simple synthetic language for arithmetic expressions with clearly defined syntax and semantics, and show that they exhibit the expected pattern of results. We then our methods to correlate neural representations of English sentences with their constituency parse trees.",
+}
+
+
+@ARTICLE{10.3389/neuro.06.004.2008,
+  
+AUTHOR={Kriegeskorte, Nikolaus and Mur, Marieke and Bandettini, Peter},   
+	 
+TITLE={Representational similarity analysis - connecting the branches of systems neuroscience},      
+	
+JOURNAL={Frontiers in Systems Neuroscience},      
+	
+VOLUME={2},      
+
+PAGES={4},     
+	
+YEAR={2008},      
+	  
+URL={https://www.frontiersin.org/article/10.3389/neuro.06.004.2008},       
+	
+DOI={10.3389/neuro.06.004.2008},      
+	
+ISSN={1662-5137},   
+   
+ABSTRACT={A fundamental challenge for systems neuroscience is to quantitatively relate its three major branches of research: brain-activity measurement, behavioral measurement, and computational modeling. Using measured brain-activity patterns to evaluate computational network models is complicated by the need to define the correspondency between the units of the model and the channels of the brain-activity data, e.g., single-cell recordings or voxels from functional magnetic resonance imaging (fMRI). Similar correspondency problems complicate relating activity patterns between different modalities of brain-activity measurement (e.g., fMRI and invasive or scalp electrophysiology), and between subjects and species. In order to bridge these divides, we suggest abstracting from the activity patterns themselves and computing representational dissimilarity matrices (RDMs), which characterize the information carried by a given representation in a brain or model. Building on a rich psychological and mathematical literature on similarity analysis, we propose a new experimental and data-analytical framework called representational similarity analysis (RSA), in which multi-channel measures of neural activity are quantitatively related to each other and to computational theory and behavior by comparing RDMs. We demonstrate RSA by relating representations of visual objects as measured with fMRI in early visual cortex and the fusiform face area to computational models spanning a wide range of complexities. The RDMs are simultaneously related via second-level application of multidimensional scaling and tested using randomization and bootstrap techniques. We discuss the broad potential of RSA, including novel approaches to experimental design, and argue that these ideas, which have deep roots in psychology and neuroscience, will allow the integrated quantitative analysis of data from all three branches, thus contributing to a more unified systems neuroscience.}
+}
+
+
+@inproceedings{raganato-tiedemann-2018-analysis,
+    title = "An Analysis of Encoder Representations in Transformer-Based Machine Translation",
+    author = {Raganato, Alessandro  and
+      Tiedemann, J{\"o}rg},
+    booktitle = "Proceedings of the 2018 {EMNLP} Workshop {B}lackbox{NLP}: Analyzing and Interpreting Neural Networks for {NLP}",
+    month = nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W18-5431",
+    doi = "10.18653/v1/W18-5431",
+    pages = "287--297",
+    abstract = "The attention mechanism is a successful technique in modern NLP, especially in tasks like machine translation. The recently proposed network architecture of the \textit{Transformer} is based entirely on attention mechanisms and achieves new state of the art results in neural machine translation, outperforming other sequence-to-sequence models. However, so far not much is known about the internal properties of the model and the representations it learns to achieve that performance. To study this question, we investigate the information that is learned by the attention mechanism in Transformer models with different translation quality. We assess the representations of the encoder by extracting dependency relations based on self-attention weights, we perform four probing tasks to study the amount of syntactic and semantic captured information and we also test attention in a transfer learning scenario. Our analysis sheds light on the relative strengths and weaknesses of the various encoder representations. We observe that specific attention heads mark syntactic dependency relations and we can also confirm that lower layers tend to learn more about syntax while higher layers tend to encode more semantics.",
+}
+
+
+@inproceedings{marecek-rosa-2019-balustrades,
+    title = "From Balustrades to Pierre Vinken: Looking for Syntax in Transformer Self-Attentions",
+    author = "Mare{\v{c}}ek, David  and
+      Rosa, Rudolf",
+    booktitle = "Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP",
+    month = aug,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W19-4827",
+    doi = "10.18653/v1/W19-4827",
+    pages = "263--275",
+    abstract = "We inspect the multi-head self-attention in Transformer NMT encoders for three source languages, looking for patterns that could have a syntactic interpretation. In many of the attention heads, we frequently find sequences of consecutive states attending to the same position, which resemble syntactic phrases. We propose a transparent deterministic method of quantifying the amount of syntactic information present in the self-attentions, based on automatically building and evaluating phrase-structure trees from the phrase-like sequences. We compare the resulting trees to existing constituency treebanks, both manually and by computing precision and recall.",
+}
+
+@article{htut2019attention,
+  title={Do attention heads in bert track syntactic dependencies?},
+  author={Htut, Phu Mon and Phang, Jason and Bordia, Shikha and Bowman, Samuel R},
+  journal={arXiv preprint arXiv:1911.12246},
+  year={2019}
+}
+
+
+@inproceedings{tamkin-etal-2020-investigating,
+    title = "Investigating Transferability in Pretrained Language Models",
+    author = "Tamkin, Alex  and
+      Singh, Trisha  and
+      Giovanardi, Davide  and
+      Goodman, Noah",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2020",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.findings-emnlp.125",
+    doi = "10.18653/v1/2020.findings-emnlp.125",
+    pages = "1393--1401",
+    abstract = "How does language model pretraining help transfer learning? We consider a simple ablation technique for determining the impact of each pretrained layer on transfer task performance. This method, partial reinitialization, involves replacing different layers of a pretrained model with random weights, then finetuning the entire model on the transfer task and observing the change in performance. This technique reveals that in BERT, layers with high probing performance on downstream GLUE tasks are neither necessary nor sufficient for high accuracy on those tasks. Furthermore, the benefit of using pretrained parameters for a layer varies dramatically with finetuning dataset size: parameters that provide tremendous performance improvement when data is plentiful may provide negligible benefits in data-scarce settings. These results reveal the complexity of the transfer learning process, highlighting the limitations of methods that operate on frozen models or single data samples.",
+}
+
+
+@inproceedings{zhu-etal-2018-exploring,
+    title = "Exploring Semantic Properties of Sentence Embeddings",
+    author = "Zhu, Xunjie  and
+      Li, Tingfeng  and
+      de Melo, Gerard",
+    booktitle = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+    month = jul,
+    year = "2018",
+    address = "Melbourne, Australia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P18-2100",
+    doi = "10.18653/v1/P18-2100",
+    pages = "632--637",
+    abstract = "Neural vector representations are ubiquitous throughout all subfields of NLP. While word vectors have been studied in much detail, thus far only little light has been shed on the properties of sentence embeddings. In this paper, we assess to what extent prominent sentence embedding methods exhibit select semantic properties. We propose a framework that generate triplets of sentences to explore how changes in the syntactic structure or semantics of a given sentence affect the similarities obtained between their sentence embeddings.",
+}
+
+
+@inproceedings{cao2021low,
+    title = "Low-Complexity Probing via Finding Subnetworks",
+    author = "Cao, Steven  and
+      Sanh, Victor  and
+      Rush, Alexander",
+    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.naacl-main.74",
+    doi = "10.18653/v1/2021.naacl-main.74",
+    pages = "960--966",
+    abstract = "The dominant approach in probing neural networks for linguistic properties is to train a new shallow multi-layer perceptron (MLP) on top of the model{'}s internal representations. This approach can detect properties encoded in the model, but at the cost of adding new parameters that may learn the task directly. We instead propose a subtractive pruning-based probe, where we find an existing subnetwork that performs the linguistic task of interest. Compared to an MLP, the subnetwork probe achieves both higher accuracy on pre-trained models and lower accuracy on random models, so it is both better at finding properties of interest and worse at learning on its own. Next, by varying the complexity of each probe, we show that subnetwork probing Pareto-dominates MLP probing in that it achieves higher accuracy given any budget of probe complexity. Finally, we analyze the resulting subnetworks across various tasks to locate where each task is encoded, and we find that lower-level tasks are captured in lower layers, reproducing similar findings in past work.",
+}
+
+
+@inproceedings{zhou-srikumar-2021,
+    title = "{D}irect{P}robe: Studying Representations without Classifiers",
+    author = "Zhou, Yichu  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.naacl-main.401",
+    doi = "10.18653/v1/2021.naacl-main.401",
+    pages = "5070--5083",
+    abstract = "Understanding how linguistic structure is encoded in contextualized embedding could help explain their impressive performance across NLP. Existing approaches for probing them usually call for training classifiers and use the accuracy, mutual information, or complexity as a proxy for the representation{'}s goodness. In this work, we argue that doing so can be unreliable because different representations may need different classifiers. We develop a heuristic, DirectProbe, that directly studies the geometry of a representation by building upon the notion of a version space for a task. Experiments with several linguistic tasks and contextualized embeddings show that, even without training classifiers, DirectProbe can shine lights on how an embedding space represents labels and also anticipate the classifier performance for the representation.",
+}
+
+
+
+
+@inproceedings{tucker2021modified,
+    title = "What if This Modified That? Syntactic Interventions with Counterfactual Embeddings",
+    author = "Tucker, Mycal  and
+      Qian, Peng  and
+      Levy, Roger",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-acl.76",
+    doi = "10.18653/v1/2021.findings-acl.76",
+    pages = "862--875",
+}
+
+
+
+@inproceedings{veldhoen2016diagnostic,
+  title={Diagnostic classifiers revealing how neural networks process hierarchical structure},
+  author={Veldhoen, Sara and Hupkes, Dieuwke and Zuidema, Willem H},
+  booktitle={CoCo@ NIPS},
+  year={2016}
+}
+
+
+@article{DBLP:journals/corr/AdiKBLG16,
+  author    = {Yossi Adi and
+               Einat Kermany and
+               Yonatan Belinkov and
+               Ofer Lavi and
+               Yoav Goldberg},
+  title     = {Fine-grained Analysis of Sentence Embeddings Using Auxiliary Prediction
+               Tasks},
+  journal   = {CoRR},
+  volume    = {abs/1608.04207},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1608.04207},
+  archivePrefix = {arXiv},
+  eprint    = {1608.04207},
+  timestamp = {Mon, 13 Aug 2018 16:46:00 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/AdiKBLG16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+@article{rogers-etal-2020-primer,
+    title = "A Primer in {BERT}ology: What We Know About How {BERT} Works",
+    author = "Rogers, Anna  and
+      Kovaleva, Olga  and
+      Rumshisky, Anna",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "8",
+    year = "2020",
+    url = "https://aclanthology.org/2020.tacl-1.54",
+    doi = "10.1162/tacl_a_00349",
+    pages = "842--866",
+    abstract = "Transformer-based models have pushed state of the art in many areas of NLP, but our understanding of what is behind their success is still limited. This paper is the first survey of over 150 studies of the popular BERT model. We review the current state of knowledge about how BERT works, what kind of information it learns and how it is represented, common modifications to its training objectives and architecture, the overparameterization issue, and approaches to compression. We then outline directions for future research.",
+}
+
+
+
+@inproceedings{devlin-etal-2019-bert,
+    title = "{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    author = "Devlin, Jacob  and
+      Chang, Ming-Wei  and
+      Lee, Kenton  and
+      Toutanova, Kristina",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    month = jun,
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/N19-1423",
+    doi = "10.18653/v1/N19-1423",
+    pages = "4171--4186",
+    abstract = "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5 (7.7 point absolute improvement), MultiNLI accuracy to 86.7{\%} (4.6{\%} absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).",
+}
+
+
+
+@inproceedings{tenney2018what,
+title={What do you learn from context? Probing for sentence structure in contextualized word representations},
+author={Ian Tenney and Patrick Xia and Berlin Chen and Alex Wang and Adam Poliak and R Thomas McCoy and Najoung Kim and Benjamin Van Durme and Sam Bowman and Dipanjan Das and Ellie Pavlick},
+booktitle={International Conference on Learning Representations},
+year={2019},
+url={https://openreview.net/forum?id=SJzSgnRcKX},
+}
+
+
+
+@inproceedings{lovering2021predicting,
+title={Predicting Inductive Biases of Pre-Trained Models},
+author={Charles Lovering and Rohan Jha and Tal Linzen and Ellie Pavlick},
+booktitle={International Conference on Learning Representations},
+year={2021},
+url={https://openreview.net/forum?id=mNtmhaDkAr}
+}
+
+@inproceedings{zhang-etal-2021-need,
+    title = "When Do You Need Billions of Words of Pretraining Data?",
+    author = "Zhang, Yian  and
+      Warstadt, Alex  and
+      Li, Xiaocheng  and
+      Bowman, Samuel R.",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.90",
+    doi = "10.18653/v1/2021.acl-long.90",
+    pages = "1112--1125",
+    abstract = "NLP is currently dominated by language models like RoBERTa which are pretrained on billions of words. But what exact knowledge or skills do Transformer LMs learn from large-scale pretraining that they cannot learn from less data? To explore this question, we adopt five styles of evaluation: classifier probing, information-theoretic probing, unsupervised relative acceptability judgments, unsupervised language model knowledge probing, and fine-tuning on NLU tasks. We then draw learning curves that track the growth of these different measures of model ability with respect to pretraining data volume using the MiniBERTas, a group of RoBERTa models pretrained on 1M, 10M, 100M and 1B words. We find that these LMs require only about 10M to 100M words to learn to reliably encode most syntactic and semantic features we test. They need a much larger quantity of data in order to acquire enough commonsense knowledge and other skills required to master typical downstream NLU tasks. The results suggest that, while the ability to encode linguistic features is almost certainly necessary for language understanding, it is likely that other, unidentified, forms of knowledge are the major drivers of recent improvements in language understanding among large pretrained models.",
+}

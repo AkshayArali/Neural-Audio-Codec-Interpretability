@@ -1,0 +1,22 @@
+\begin{table*}[t]
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.35\textwidth}{!}{
+    \begin{tabular}{lc|cc}
+        \toprule
+        Source & Reference & WER$\downarrow$ & SIM$\uparrow$  \\
+        \midrule
+        \multicolumn{2}{c}{Groundtruth} & 0.4 & 0.93 \\
+        RVQ-1 & RVQ-2 &  2.6 & 0.72 \\
+        RVQ-1 & RVQ-2:4 & 11.7 & 0.80 \\
+        % RVQ-1 & RVQ-2:6 & 24.2 & 0.81 \\
+        RVQ-1 & RVQ-2:8 & 35.4 & 0.82 \\
+        \bottomrule
+    \end{tabular}}
+    \caption{Results of one-shot voice conversion. Source and Reference refers to source token matrix and reference token matrix respectively. 
+    }
+    \label{tab:oneshot_vc}
+\vspace{-1em} 
+\end{table*}

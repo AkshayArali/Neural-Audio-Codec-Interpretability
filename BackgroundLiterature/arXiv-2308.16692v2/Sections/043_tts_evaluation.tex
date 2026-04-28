@@ -1,0 +1,11 @@
+We conduct zero-shot TTS evaluation on the VCTK dataset, which comprises 108 speakers. There is no speaker overlap between the training data and VCTK dataset. For each speaker, we randomly selected a 3s utterance as the prompts while the textual content of a different utterance is used as the input text. 
+
+\textbf{Objective Metrics}~
+We evaluate the TTS systems with speaker similarity and WER.
+We evaluate the speaker similarity
+between the generated speech and the prompt speech. We calculate the similarity with the following steps: 1)  we utilize WavLM-TDNN to calculate the speaker embedding for the generated speech and the prompt speech. 2) we calculate the cosine similarity between the normalized embeddings. 
+We employ Whisper medium model to transcribe the generated speech and calculate
+the WER.
+
+\textbf{Subjective Metrics}~
+We determine the Mean Opinion Score (MOS) and Similarity Mean Opinion Score (SMOS) through human evaluations. MOS reflects the naturalness of speech, while SMOS assesses the degree of similarity to the original speaker's voice. We engaged 12 and 6 native speakers as contributors for MOS and SMOS evaluations, respectively. MOS and SMOS both span from 1 to 5, with higher values signifying greater speech quality and voice similarity respectively.

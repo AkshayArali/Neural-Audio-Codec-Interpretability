@@ -1,0 +1,22 @@
+\begin{table*}[t]
+    % \setlength{\abovecaptionskip}{-0.cm}
+    \setlength{\belowcaptionskip}{-0.2cm}
+    % \renewcommand{\arraystretch}{1.2}
+    \Large
+    \centering
+    \resizebox{0.7\textwidth}{!}{
+    \begin{tabular}{l|c|c|c}
+        \toprule
+        ~ & Accurate Content & High-quality Speech & Single Tokenzier \\
+        \midrule
+        Semantic LM & $\surd$ & $\times$ & $\surd$ \\
+        Acoustic LM & $\times$ & $\surd$ & $\surd$ \\
+        Hierarchical LM & $\surd$ & $\surd$ & $\times$ \\
+        USLM~(ours) & $\surd$ & $\surd$ & $\surd$ \\
+        \bottomrule
+    \end{tabular}}
+    \caption{Comparision between different speech language models. \textit{Semantic LM} refers to semantic language models. \textit{Acoustic LM} refers to acoustic language models. \textit{Hierarchical LM} refers to hierarchical speech language models. \textit{USLM} refers to our unified speech language model.
+    }
+    \label{tab:slm_comparision}
+\vspace{-0.5em} 
+\end{table*}

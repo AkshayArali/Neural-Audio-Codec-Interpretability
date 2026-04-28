@@ -1,0 +1,16 @@
+\textbf{Datasets}~
+For \method training, we use LibriSpeech~\citep{librispeech} dataset. 
+We randomly crop a 3-second segment from the speech samples at each training iteration. For zero-shot TTS, we train AR and NAR models on the English subset of Multilingual LibriSpeech~\citep{Pratap_2020} dataset, which contains 44K hours of transcribed speech data derived from LibriVox audiobooks. We select speech samples with durations ranging from 3 to 14 seconds for training data. The sampling rate is 16KHz for all speech data.
+
+\textbf{Model}~
+For \method, we introduce the details about model structure in section \ref{sec:031_model_structure} and Appendix \ref{sec:app:model}.
+For zero-shot TTS experiments, 
+AR model and NAR model are both
+12-layer Transformer decoders with 16 attention heads, an attention dimension of 1024 and the FFN dimension of 4096.
+
+\textbf{Training}~
+For \method, the model are trained on 2 A800 GPUS for 20 epochs with maximum learning rate of 4e-4 and batch size of 20 per GPU.
+For Unified Speech Language Model, both AR and NAR models are trained on 8 A800 GPUS for 500k steps with maximum learning rate of 5e-4. The AR model is trained with batch size of 7500 tokens per GPU, and the NAR model is trained with batch size of 5000 tokens per GPU.
+
+\textbf{Baselines}~
+We adopt EnCodec\_24khz\_6kpbs (hereinafter referred to as EnCodec)~\citep{défossez2022high} as the baseline for \method and VALL-E~\citep{wang2023neural} as the baseline system for zero-shot TTS. We train VALL-E under the same dataset and experimental setups as EnCodec.

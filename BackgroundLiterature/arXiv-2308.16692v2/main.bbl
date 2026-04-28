@@ -1,0 +1,267 @@
+\begin{thebibliography}{37}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ba et~al.(2016)Ba, Kiros, and Hinton]{ba2016layer}
+Ba, J.~L., Kiros, J.~R., and Hinton, G.~E.
+\newblock Layer normalization, 2016.
+
+\bibitem[Baevski et~al.(2020)Baevski, Zhou, Mohamed, and
+  Auli]{baevski2020wav2vec}
+Baevski, A., Zhou, Y., Mohamed, A., and Auli, M.
+\newblock wav2vec 2.0: A framework for self-supervised learning of speech
+  representations.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  33:\penalty0 12449--12460, 2020.
+
+\bibitem[Bengio et~al.(2013)Bengio, L{\'e}onard, and
+  Courville]{bengio2013estimating}
+Bengio, Y., L{\'e}onard, N., and Courville, A.
+\newblock Estimating or propagating gradients through stochastic neurons for
+  conditional computation.
+\newblock \emph{arXiv preprint arXiv:1308.3432}, 2013.
+
+\bibitem[Borsos et~al.(2022)Borsos, Marinier, Vincent, Kharitonov, Pietquin,
+  Sharifi, Teboul, Grangier, Tagliasacchi, and Zeghidour]{borsos2022audiolm}
+Borsos, Z., Marinier, R., Vincent, D., Kharitonov, E., Pietquin, O., Sharifi,
+  M., Teboul, O., Grangier, D., Tagliasacchi, M., and Zeghidour, N.
+\newblock Audiolm: a language modeling approach to audio generation, 2022.
+
+\bibitem[Casanova et~al.(2022)Casanova, Weber, Shulby, Junior, G{\"o}lge, and
+  Ponti]{pmlr-v162-casanova22a}
+Casanova, E., Weber, J., Shulby, C.~D., Junior, A.~C., G{\"o}lge, E., and
+  Ponti, M.~A.
+\newblock {Y}our{TTS}: Towards zero-shot multi-speaker {TTS} and zero-shot
+  voice conversion for everyone.
+\newblock In Chaudhuri, K., Jegelka, S., Song, L., Szepesvari, C., Niu, G., and
+  Sabato, S. (eds.), \emph{Proceedings of the 39th International Conference on
+  Machine Learning}, volume 162 of \emph{Proceedings of Machine Learning
+  Research}, pp.\  2709--2720. PMLR, 17--23 Jul 2022.
+\newblock URL \url{https://proceedings.mlr.press/v162/casanova22a.html}.
+
+\bibitem[Chang et~al.(2022)Chang, Yang, and Lee]{chang2022distilhubert}
+Chang, H.-J., Yang, S.-w., and Lee, H.-y.
+\newblock Distilhubert: Speech representation learning by layer-wise
+  distillation of hidden-unit bert.
+\newblock In \emph{ICASSP 2022-2022 IEEE International Conference on Acoustics,
+  Speech and Signal Processing (ICASSP)}, pp.\  7087--7091. IEEE, 2022.
+
+\bibitem[Chen et~al.(2022)Chen, Wang, Chen, Wu, Liu, Chen, Li, Kanda, Yoshioka,
+  Xiao, Wu, Zhou, Ren, Qian, Qian, Wu, Zeng, Yu, and Wei]{Chen_2022}
+Chen, S., Wang, C., Chen, Z., Wu, Y., Liu, S., Chen, Z., Li, J., Kanda, N.,
+  Yoshioka, T., Xiao, X., Wu, J., Zhou, L., Ren, S., Qian, Y., Qian, Y., Wu,
+  J., Zeng, M., Yu, X., and Wei, F.
+\newblock {WavLM}: Large-scale self-supervised pre-training for full stack
+  speech processing.
+\newblock \emph{{IEEE} Journal of Selected Topics in Signal Processing},
+  16\penalty0 (6):\penalty0 1505--1518, oct 2022.
+\newblock \doi{10.1109/jstsp.2022.3188113}.
+\newblock URL \url{https://doi.org/10.1109%2Fjstsp.2022.3188113}.
+
+\bibitem[Cheng et~al.(2020)Cheng, Hao, Dai, Liu, Gan, and Carin]{cheng2020club}
+Cheng, P., Hao, W., Dai, S., Liu, J., Gan, Z., and Carin, L.
+\newblock Club: A contrastive log-ratio upper bound of mutual information,
+  2020.
+
+\bibitem[Chung et~al.(2021)Chung, Zhang, Han, Chiu, Qin, Pang, and
+  Wu]{chung2021w2vbert}
+Chung, Y.-A., Zhang, Y., Han, W., Chiu, C.-C., Qin, J., Pang, R., and Wu, Y.
+\newblock W2v-bert: Combining contrastive learning and masked language modeling
+  for self-supervised speech pre-training, 2021.
+
+\bibitem[Clevert et~al.(2016)Clevert, Unterthiner, and
+  Hochreiter]{clevert2016fast}
+Clevert, D.-A., Unterthiner, T., and Hochreiter, S.
+\newblock Fast and accurate deep network learning by exponential linear units
+  (elus), 2016.
+
+\bibitem[Dong et~al.(2023)Dong, Huang, Tian, Xu, Ko, Zhao, Feng, Li, Wang,
+  Cheng, Yue, Bai, Chen, Lu, Ma, Wang, Wang, and Wang]{dong2023polyvoice}
+Dong, Q., Huang, Z., Tian, Q., Xu, C., Ko, T., Zhao, Y., Feng, S., Li, T.,
+  Wang, K., Cheng, X., Yue, F., Bai, Y., Chen, X., Lu, L., Ma, Z., Wang, Y.,
+  Wang, M., and Wang, Y.
+\newblock Polyvoice: Language models for speech to speech translation, 2023.
+
+\bibitem[Défossez et~al.(2022)Défossez, Copet, Synnaeve, and
+  Adi]{défossez2022high}
+Défossez, A., Copet, J., Synnaeve, G., and Adi, Y.
+\newblock High fidelity neural audio compression, 2022.
+
+\bibitem[Hassid et~al.(2023)Hassid, Remez, Nguyen, Gat, Conneau, Kreuk, Copet,
+  Defossez, Synnaeve, Dupoux, Schwartz, and Adi]{hassid2023textually}
+Hassid, M., Remez, T., Nguyen, T.~A., Gat, I., Conneau, A., Kreuk, F., Copet,
+  J., Defossez, A., Synnaeve, G., Dupoux, E., Schwartz, R., and Adi, Y.
+\newblock Textually pretrained speech language models, 2023.
+
+\bibitem[Hines et~al.(2012)Hines, Skoglund, Kokaram, and Harte]{6309421}
+Hines, A., Skoglund, J., Kokaram, A., and Harte, N.
+\newblock Visqol: The virtual speech quality objective listener.
+\newblock In \emph{IWAENC 2012; International Workshop on Acoustic Signal
+  Enhancement}, pp.\  1--4, 2012.
+
+\bibitem[Hsu et~al.(2021)Hsu, Bolte, Tsai, Lakhotia, Salakhutdinov, and
+  Mohamed]{hsu2021hubert}
+Hsu, W.-N., Bolte, B., Tsai, Y.-H.~H., Lakhotia, K., Salakhutdinov, R., and
+  Mohamed, A.
+\newblock Hubert: Self-supervised speech representation learning by masked
+  prediction of hidden units.
+\newblock \emph{IEEE/ACM Transactions on Audio, Speech, and Language
+  Processing}, 29:\penalty0 3451--3460, 2021.
+
+\bibitem[Kharitonov et~al.(2023)Kharitonov, Vincent, Borsos, Marinier, Girgin,
+  Pietquin, Sharifi, Tagliasacchi, and Zeghidour]{kharitonov2023speak}
+Kharitonov, E., Vincent, D., Borsos, Z., Marinier, R., Girgin, S., Pietquin,
+  O., Sharifi, M., Tagliasacchi, M., and Zeghidour, N.
+\newblock Speak, read and prompt: High-fidelity text-to-speech with minimal
+  supervision, 2023.
+
+\bibitem[Kong et~al.(2020)Kong, Kim, and Bae]{kong2020hifi}
+Kong, J., Kim, J., and Bae, J.
+\newblock Hifi-gan: Generative adversarial networks for efficient and high
+  fidelity speech synthesis.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  33:\penalty0 17022--17033, 2020.
+
+\bibitem[Lakhotia et~al.(2021)Lakhotia, Kharitonov, Hsu, Adi, Polyak, Bolte,
+  Nguyen, Copet, Baevski, Mohamed, et~al.]{lakhotia2021generative}
+Lakhotia, K., Kharitonov, E., Hsu, W.-N., Adi, Y., Polyak, A., Bolte, B.,
+  Nguyen, T.-A., Copet, J., Baevski, A., Mohamed, A., et~al.
+\newblock On generative spoken language modeling from raw audio.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  9:\penalty0 1336--1354, 2021.
+
+\bibitem[Liu et~al.(2023)Liu, Wang, Fu, Yi, Wen, and Tao]{liu2023unifyspeech}
+Liu, H., Wang, T., Fu, R., Yi, J., Wen, Z., and Tao, J.
+\newblock Unifyspeech: A unified framework for zero-shot text-to-speech and
+  voice conversion, 2023.
+
+\bibitem[Mohamed et~al.(2022)Mohamed, yi~Lee, Borgholt, Havtorn, Edin, Igel,
+  Kirchhoff, Li, Livescu, Maaloe, Sainath, and Watanabe]{Mohamed_2022}
+Mohamed, A., yi~Lee, H., Borgholt, L., Havtorn, J.~D., Edin, J., Igel, C.,
+  Kirchhoff, K., Li, S.-W., Livescu, K., Maaloe, L., Sainath, T.~N., and
+  Watanabe, S.
+\newblock Self-supervised speech representation learning: A review.
+\newblock \emph{{IEEE} Journal of Selected Topics in Signal Processing},
+  16\penalty0 (6):\penalty0 1179--1210, oct 2022.
+\newblock \doi{10.1109/jstsp.2022.3207050}.
+\newblock URL \url{https://doi.org/10.1109%2Fjstsp.2022.3207050}.
+
+\bibitem[OpenAI(2023)]{openai2023gpt4}
+OpenAI.
+\newblock Gpt-4 technical report, 2023.
+
+\bibitem[Panayotov et~al.(2015)Panayotov, Chen, Povey, and
+  Khudanpur]{librispeech}
+Panayotov, V., Chen, G., Povey, D., and Khudanpur, S.
+\newblock Librispeech: An asr corpus based on public domain audio books.
+\newblock In \emph{2015 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP)}, pp.\  5206--5210, 2015.
+\newblock \doi{10.1109/ICASSP.2015.7178964}.
+
+\bibitem[Polyak et~al.(2021)Polyak, Adi, Copet, Kharitonov, Lakhotia, Hsu,
+  Mohamed, and Dupoux]{polyak2021speech}
+Polyak, A., Adi, Y., Copet, J., Kharitonov, E., Lakhotia, K., Hsu, W.-N.,
+  Mohamed, A., and Dupoux, E.
+\newblock Speech resynthesis from discrete disentangled self-supervised
+  representations, 2021.
+
+\bibitem[Pratap et~al.(2020)Pratap, Xu, Sriram, Synnaeve, and
+  Collobert]{Pratap_2020}
+Pratap, V., Xu, Q., Sriram, A., Synnaeve, G., and Collobert, R.
+\newblock {MLS}: A large-scale multilingual dataset for speech research.
+\newblock In \emph{Interspeech 2020}. {ISCA}, oct 2020.
+\newblock \doi{10.21437/interspeech.2020-2826}.
+\newblock URL \url{https://doi.org/10.21437%2Finterspeech.2020-2826}.
+
+\bibitem[Qian et~al.(2019)Qian, Zhang, Chang, Yang, and
+  Hasegawa-Johnson]{qian2019autovc}
+Qian, K., Zhang, Y., Chang, S., Yang, X., and Hasegawa-Johnson, M.
+\newblock Autovc: Zero-shot voice style transfer with only autoencoder loss,
+  2019.
+
+\bibitem[Qian et~al.(2020)Qian, Zhang, Chang, Hasegawa-Johnson, and
+  Cox]{qian2020unsupervised}
+Qian, K., Zhang, Y., Chang, S., Hasegawa-Johnson, M., and Cox, D.
+\newblock Unsupervised speech decomposition via triple information bottleneck.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  7836--7846. PMLR, 2020.
+
+\bibitem[Radford et~al.(2023)Radford, Kim, Xu, Brockman, McLeavey, and
+  Sutskever]{radford2023robust}
+Radford, A., Kim, J.~W., Xu, T., Brockman, G., McLeavey, C., and Sutskever, I.
+\newblock Robust speech recognition via large-scale weak supervision.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  28492--28518. PMLR, 2023.
+
+\bibitem[Rubenstein et~al.(2023)Rubenstein, Asawaroengchai, Nguyen, Bapna,
+  Borsos, de~Chaumont~Quitry, Chen, Badawy, Han, Kharitonov, Muckenhirn,
+  Padfield, Qin, Rozenberg, Sainath, Schalkwyk, Sharifi, Ramanovich,
+  Tagliasacchi, Tudor, Velimirović, Vincent, Yu, Wang, Zayats, Zeghidour,
+  Zhang, Zhang, Zilka, and Frank]{rubenstein2023audiopalm}
+Rubenstein, P.~K., Asawaroengchai, C., Nguyen, D.~D., Bapna, A., Borsos, Z.,
+  de~Chaumont~Quitry, F., Chen, P., Badawy, D.~E., Han, W., Kharitonov, E.,
+  Muckenhirn, H., Padfield, D., Qin, J., Rozenberg, D., Sainath, T., Schalkwyk,
+  J., Sharifi, M., Ramanovich, M.~T., Tagliasacchi, M., Tudor, A.,
+  Velimirović, M., Vincent, D., Yu, J., Wang, Y., Zayats, V., Zeghidour, N.,
+  Zhang, Y., Zhang, Z., Zilka, L., and Frank, C.
+\newblock Audiopalm: A large language model that can speak and listen, 2023.
+
+\bibitem[Salimans \& Kingma(2016)Salimans and Kingma]{salimans2016weight}
+Salimans, T. and Kingma, D.~P.
+\newblock Weight normalization: A simple reparameterization to accelerate
+  training of deep neural networks.
+\newblock \emph{Advances in neural information processing systems}, 29, 2016.
+
+\bibitem[Series(2014)]{series2014method}
+Series, B.
+\newblock Method for the subjective assessment of intermediate quality level of
+  audio systems.
+\newblock \emph{International Telecommunication Union Radiocommunication
+  Assembly}, 2014.
+
+\bibitem[Shi et~al.(2021)Shi, Bu, Xu, Zhang, and Li]{shi2021aishell3}
+Shi, Y., Bu, H., Xu, X., Zhang, S., and Li, M.
+\newblock Aishell-3: A multi-speaker mandarin tts corpus and the baselines,
+  2021.
+
+\bibitem[Touvron et~al.(2023)Touvron, Lavril, Izacard, Martinet, Lachaux,
+  Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, et~al.]{touvron2023llama}
+Touvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M.-A., Lacroix,
+  T., Rozi{\`e}re, B., Goyal, N., Hambro, E., Azhar, F., et~al.
+\newblock Llama: Open and efficient foundation language models.
+\newblock \emph{arXiv preprint arXiv:2302.13971}, 2023.
+
+\bibitem[Wang et~al.(2023)Wang, Chen, Wu, Zhang, Zhou, Liu, Chen, Liu, Wang,
+  Li, He, Zhao, and Wei]{wang2023neural}
+Wang, C., Chen, S., Wu, Y., Zhang, Z., Zhou, L., Liu, S., Chen, Z., Liu, Y.,
+  Wang, H., Li, J., He, L., Zhao, S., and Wei, F.
+\newblock Neural codec language models are zero-shot text to speech
+  synthesizers, 2023.
+
+\bibitem[Wu \& Lee(2020)Wu and Lee]{wu2020one}
+Wu, D.-Y. and Lee, H.-y.
+\newblock One-shot voice conversion by vector quantization.
+\newblock In \emph{ICASSP 2020-2020 IEEE International Conference on Acoustics,
+  Speech and Signal Processing (ICASSP)}, pp.\  7734--7738. IEEE, 2020.
+
+\bibitem[Yang et~al.(2023)Yang, Liu, Huang, Tian, Weng, and
+  Zou]{yang2023hificodec}
+Yang, D., Liu, S., Huang, R., Tian, J., Weng, C., and Zou, Y.
+\newblock Hifi-codec: Group-residual vector quantization for high fidelity
+  audio codec, 2023.
+
+\bibitem[Zeghidour et~al.(2021)Zeghidour, Luebs, Omran, Skoglund, and
+  Tagliasacchi]{zeghidour2021soundstream}
+Zeghidour, N., Luebs, A., Omran, A., Skoglund, J., and Tagliasacchi, M.
+\newblock Soundstream: An end-to-end neural audio codec, 2021.
+
+\bibitem[Zhang et~al.(2023)Zhang, Li, Zhang, Zhan, Wang, Zhou, and
+  Qiu]{zhang2023speechgpt}
+Zhang, D., Li, S., Zhang, X., Zhan, J., Wang, P., Zhou, Y., and Qiu, X.
+\newblock Speechgpt: Empowering large language models with intrinsic
+  cross-modal conversational abilities, 2023.
+
+\end{thebibliography}

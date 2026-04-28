@@ -1,0 +1,147 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+% \pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+
+\documentclass[11pt]{article}
+
+
+% \usepackage[preprint]{neurips_2023}
+\usepackage{iclr2024_conference}
+% \usepackage{neurips_2023}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{makecell}
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+\usepackage{breakurl}
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\usepackage{times}
+\usepackage{latexsym}
+% \renewcommand{\UrlFont}{\ttfamily\small}
+
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{paralist}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{mathrsfs}
+\usepackage{algorithm,algpseudocode}
+\usepackage{mdwlist}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{dsfont}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{caption}
+% \usepackage{emoji}
+\usepackage{multicol}
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\newcommand{\method}{SpeechTokenizer\xspace}
+
+\newcommand{\bench}{SLMTokBench\xspace}
+
+\DeclareCaptionJustification{mycenter}{\centering}
+
+% \title{\method: Enable LLM to Listen and Speak via Discrete Representation}
+
+% \title{\method: Inherent Cross-modal \\ Large Language Model}
+
+% \title{\method: Unified Speech Tokenizer with \\Residual Disentanglement}
+\title{\method: Unified Speech Tokenizer for\\ Speech Language Models}
+
+
+
+\author{
+    \textbf{Xin Zhang}\thanks{Equal contribution. Order is random},
+    ~\textbf{Dong Zhang$^\ast$},
+    ~\textbf{Shimin Li},
+    ~\textbf{Yaqian Zhou}\thanks{Corresponding author},
+    ~\textbf{Xipeng Qiu}\footnotemark[\value{footnote}] \\
+    School of Computer Science, Fudan University\\
+    Shanghai Key Laboratory of Intelligent Information Processing, Fudan University\\
+    {\tt 	\{xin\_zhang22,dongzhang22\}@m.fudan.edu.cn} \\
+    {\tt 	\{smli20,zhouyaqian,xpqiu\}@fudan.edu.cn} \\
+    \\\\
+    \url{https://0nutation.github.io/SpeechTokenizer.github.io/}
+}
+
+% 
+\iclrfinalcopy % Uncomment for camera-ready version, but NOT for submission.
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{Sections/000_abstract.tex}
+\end{abstract}
+
+\section{Introduction}
+\input{Sections/010_intro.tex}
+
+\section{\bench: Speech Language Model Token Benchmark}
+\input{Sections/025_bench}
+
+\section{\method}
+\input{Sections/030_method.tex}
+
+\section{Experiments}
+\input{Sections/040_exps.tex}
+
+\section{Analysis}
+\input{Sections/050_analysis.tex}
+
+\section{Related Work}
+Oure related work is put in Appendix~\ref{sec:app:related}.
+% \input{Sections/020_related.tex}
+
+\section{Conclusion}
+\input{Sections/060_conclusion.tex}
+
+
+
+
+\bibliography{custom}
+\bibliographystyle{neurips_2023}
+
+\clearpage
+\appendix
+\input{Sections/070_appendix.tex}
+
+
+\end{document}
